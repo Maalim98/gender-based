@@ -1,37 +1,38 @@
-import React, { useCallback, useEffect } from "react";
-import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
+import { useCallback, useEffect, useState } from "react";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+
+// Images imported directly
+import slide1 from "../assets/images/slide1.jpg";
+import slide2 from "../assets/images/slide2.jpg";
+import slide3 from "../assets/images/slide3.jpg";
 
 const Hero = () => {
   const slides = [
     {
       title: "Standing United,\nFighting Violence,\nProtecting Lives",
       subtitle: "24/7 support when you need it most",
-      image: "./src/assets/images/slide1.jpg"
+      image: slide1,
     },
     {
       title: "Empowering Change,\nCreating Safe Spaces,\nHealing Together",
       subtitle: "Support that transforms lives",
-      image: "./src/assets/images/slide2.jpg"
+      image: slide2,
     },
     {
       title: "Breaking Silence,\nBuilding Strength,\nRestoring Hope",
       subtitle: "Every voice matters, every story deserves to be heard",
-      image: "./src/assets/images/slide3.jpg"
-    }
+      image: slide3,
+    },
   ];
 
-  const [currentSlide, setCurrentSlide] = React.useState(0);
+  const [currentSlide, setCurrentSlide] = useState(0);
 
   const nextSlide = useCallback(() => {
-    setCurrentSlide(current => 
-      current === slides.length - 1 ? 0 : current + 1
-    );
+    setCurrentSlide((current) => (current === slides.length - 1 ? 0 : current + 1));
   }, [slides.length]);
 
   const prevSlide = useCallback(() => {
-    setCurrentSlide(current => 
-      current === 0 ? slides.length - 1 : current - 1
-    );
+    setCurrentSlide((current) => (current === 0 ? slides.length - 1 : current - 1));
   }, [slides.length]);
 
   useEffect(() => {
@@ -61,7 +62,7 @@ const Hero = () => {
       </div>
 
       {/* Navigation Arrows */}
-      <button 
+      <button
         onClick={prevSlide}
         className="absolute left-4 top-1/2 -translate-y-1/2 z-20 bg-white/30 hover:bg-white/50 p-4 rounded-full transition-colors cursor-pointer"
         aria-label="Previous slide"
@@ -69,7 +70,7 @@ const Hero = () => {
         <FaChevronLeft className="w-8 h-8 text-white" />
       </button>
 
-      <button 
+      <button
         onClick={nextSlide}
         className="absolute right-4 top-1/2 -translate-y-1/2 z-20 bg-white/30 hover:bg-white/50 p-4 rounded-full transition-colors cursor-pointer"
         aria-label="Next slide"
@@ -89,9 +90,7 @@ const Hero = () => {
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 whitespace-pre-line">
               {slide.title}
             </h1>
-            <p className="text-xl text-gray-200 mb-12">
-              {slide.subtitle}
-            </p>
+            <p className="text-xl text-gray-200 mb-12">{slide.subtitle}</p>
             <button className="bg-white text-emerald-500 px-8 py-3 rounded-full hover:bg-emerald-50 transition-colors">
               Learn More
             </button>
