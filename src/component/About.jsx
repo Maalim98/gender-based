@@ -73,7 +73,7 @@ const About = () => {
                             {/* Card 1 */}
                             <div className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
                                 <img 
-                                    src="public/images/training1.jpg" 
+                                    src="./src/assets/images/training1.jpg" 
                                     alt="Community Training" 
                                     className="w-full h-64 object-cover"
                                 />
@@ -96,7 +96,7 @@ const About = () => {
                             {/* Card 2 */}
                             <div className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
                                 <img 
-                                    src="public/images/training2.jpg" 
+                                    src="./src/assets/images/training2.jpg" 
                                     alt="School Program" 
                                     className="w-full h-64 object-cover"
                                 />
@@ -119,7 +119,7 @@ const About = () => {
                             {/* Card 3 */}
                             <div className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
                                 <img 
-                                    src="public/images/training3.webp" 
+                                    src="./src/assets/images/training3.webp" 
                                     alt="Healthcare Training" 
                                     className="w-full h-64 object-cover"
                                 />
@@ -142,7 +142,7 @@ const About = () => {
                             {/* Card 4 */}
                             <div className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
                                 <img 
-                                    src="public/images/training4.png" 
+                                    src="./src/assets/images/training4.png" 
                                     alt="Community Forum" 
                                     className="w-full h-64 object-cover"
                                 />
@@ -165,7 +165,7 @@ const About = () => {
                             {/* Card 5 */}
                             <div className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
                                 <img 
-                                    src="public/images/training5.jpg" 
+                                    src="./src/assets/images/training5.jpg" 
                                     alt="UN Conference" 
                                     className="w-full h-64 object-cover"
                                 />

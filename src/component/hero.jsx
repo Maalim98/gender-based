@@ -6,17 +6,17 @@ const Hero = () => {
     {
       title: "Standing United,\nFighting Violence,\nProtecting Lives",
       subtitle: "24/7 support when you need it most",
-      image: "public/images/slide1.jpg"
+      image: "./src/assets/images/slide1.jpg"
     },
     {
       title: "Empowering Change,\nCreating Safe Spaces,\nHealing Together",
       subtitle: "Support that transforms lives",
-      image: "public/images/slide2.jpg"
+      image: "./src/assets/images/slide2.jpg"
     },
     {
       title: "Breaking Silence,\nBuilding Strength,\nRestoring Hope",
       subtitle: "Every voice matters, every story deserves to be heard",
-      image: "public/images/slide3.jpg"
+      image: "./src/assets/images/slide3.jpg"
     }
   ];
 
