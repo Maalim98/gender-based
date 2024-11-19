@@ -1,5 +1,10 @@
 import { useEffect } from "react";
 import gsap from "gsap";
+import training1 from '../assets/images/training1.jpg';
+import training2 from '../assets/images/training2.jpg';
+import training3 from '../assets/images/training3.webp';
+import training4 from '../assets/images/training4.png';
+import training5 from '../assets/images/training5.jpg';
 
 const About = () => {
     useEffect(() => {
@@ -73,7 +78,7 @@ const About = () => {
                             {/* Card 1 */}
                             <div className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
                                 <img 
-                                    src="src/assets/images/training1.jpg" 
+                                    src={training1}
                                     alt="Community Training" 
                                     className="w-full h-64 object-cover"
                                 />
@@ -96,7 +101,7 @@ const About = () => {
                             {/* Card 2 */}
                             <div className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
                                 <img 
-                                    src="src/assets/images/training2.jpg" 
+                                    src={training2}
                                     alt="School Program" 
                                     className="w-full h-64 object-cover"
                                 />
@@ -119,7 +124,7 @@ const About = () => {
                             {/* Card 3 */}
                             <div className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
                                 <img 
-                                    src="src/assets/images/training3.webp" 
+                                    src={training3}
                                     alt="Healthcare Training" 
                                     className="w-full h-64 object-cover"
                                 />
@@ -142,7 +147,7 @@ const About = () => {
                             {/* Card 4 */}
                             <div className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
                                 <img 
-                                    src="src/assets/images/training4.png" 
+                                    src={training4}
                                     alt="Community Forum" 
                                     className="w-full h-64 object-cover"
                                 />
@@ -165,7 +170,7 @@ const About = () => {
                             {/* Card 5 */}
                             <div className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
                                 <img 
-                                    src="src/assets/images/training5.jpg" 
+                                    src={training5}
                                     alt="UN Conference" 
                                     className="w-full h-64 object-cover"
                                 />
