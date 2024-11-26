@@ -47,8 +47,9 @@ const IntroSection = () => {
                         <div className="absolute inset-0 bg-emerald-800/10 rounded-3xl transform rotate-1"></div>
                         <div className="absolute inset-0 bg-yellow-400/10 rounded-3xl transform -rotate-1"></div>
                         <div className="relative overflow-hidden rounded-3xl shadow-xl">
+                            {/* Updated the image source */}
                             <img 
-                                src="../src/assets/images/communitysupport.jpg" 
+                                src="/images/communitysupport.jpg" 
                                 alt="Community support" 
                                 className="w-full h-[300px] md:h-[400px] object-cover transform hover:scale-105 transition-transform duration-700"
                             />
