@@ -1,16 +1,24 @@
 
-import Navbar from "./component/Navbar";
-import Hero from "./component/hero";
-import About from "./component/About";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import Home from './pages/Home';
+import Footer from './components/Footer';
+import EmergencySection from './pages/EmergencySection';
 
-
-
-export default function App() {
+const App = () => {
   return (
-    <div>
-      <Navbar />
-      <Hero />
-      <About />
-    </div>
-  )
-}
+    <Router>
+      <div className="min-h-screen flex flex-col">
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          {/* Add other routes as needed */}
+          <Route path="/emergency" element={<EmergencySection/>} />
+        </Routes>
+        <Footer />
+      </div>
+    </Router>
+  );
+};
+
+export default App;
