@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
+import woman5 from '../assets/images/woman5.jpg';
+import xalimo from '../assets/images/xalimo.jpg';
 
 const ImpactStoriesSection = () => {
     const [activeTestimonial, setActiveTestimonial] = useState(0);
@@ -13,7 +15,7 @@ const ImpactStoriesSection = () => {
             a lot. At some point she wanted to commit suicide. I interrogated her to find out what was wrong and she 
             told me what the pastor had done to her. I took her to Karen hospital where we found out she was pregnant. 
             We were then reffered to GVRC. Getting to learn what the pastor had done was so painful to me.`,
-            image: "../src/assets/images/woman1.jpg",
+            image: xalimo,
         },
         {
             name: "Amina Hassan Mohamed",
@@ -21,7 +23,7 @@ const ImpactStoriesSection = () => {
             story: `As a community leader in Eastleigh, I've seen many women suffer in silence. When I discovered GVRC, 
             it became a beacon of hope. We've helped over 50 women from our community access counseling and medical care. 
             The cultural sensitivity and respect shown by the staff has made a huge difference in breaking down barriers.`,
-            image: "../src/assets/images/woman2.jpg",
+            image: woman5,
         },
         {
             name: "Fatuma Abdi Nur",
@@ -29,7 +31,7 @@ const ImpactStoriesSection = () => {
             story: `After my experience, I felt lost and ashamed. GVRC not only helped me heal but also empowered me 
             to become a voice for others. Today, I lead support groups for young Somali women, showing them that 
             seeking help is not a sign of weakness but of strength.`,
-            image: "../src/assets/images/woman3.jpg",
+            image: xalimo,
         },
         {
             name: "Zahra Ibrahim Ahmed",
@@ -37,7 +39,7 @@ const ImpactStoriesSection = () => {
             story: `Working with teenage survivors has shown me how crucial early intervention is. One young girl's 
             story particularly moved me - she went from barely speaking to becoming a peer counselor herself. GVRC's 
             approach to healing considers both emotional and cultural aspects.`,
-            image: "../src/assets/images/woman4.jpg",
+            image: woman5,
         },
         {
             name: "Halima Omar Sheikh",
@@ -45,7 +47,7 @@ const ImpactStoriesSection = () => {
             story: `When I started the women's support group, many were hesitant to share. Now, our sessions are a 
             safe space where healing happens collectively. We've created a sisterhood that extends beyond our weekly 
             meetings, supporting each other through recovery and growth.`,
-            image: "../src/assets/images/woman5.jpg",
+            image: woman5,
         },
         
     ];
@@ -54,16 +56,15 @@ const ImpactStoriesSection = () => {
         {
             title: "Empowering Rural Communities",
             description: "Reaching out to remote areas with essential support services",
-            image: "../src/assets/images/communityoutreach.jpg",
+            image: xalimo,
             tag: "Community Outreach",
             route: "/community-outreach",
             color: "from-emerald-500/20 to-teal-500/20"
         },
-        // ... your existing stories
         {
             title: "Breaking the Silence",
             description: "National campaign reaching thousands across Kenya",
-            image: "../src/assets/images/awareness.jpg",
+            image: woman5,
             tag: "Awareness",
             route: "/awareness-campaigns",
             color: "from-yellow-500/20 to-orange-500/20"
@@ -71,7 +72,7 @@ const ImpactStoriesSection = () => {
         {
             title: "Healing Through Community",
             description: "New support center opened in Nakuru County",
-            image: "../src/assets/images/support.jpg",
+            image: xalimo,
             tag: "Support Programs",
             route: "/support-programs",
             color: "from-purple-500/20 to-pink-500/20"

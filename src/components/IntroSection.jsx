@@ -1,5 +1,4 @@
-import React from 'react';
-import communitySupport from '../assets/images/communitysupport.jpg';
+import communitySupport from '../assets/images/woman5.jpg';
 
 const IntroSection = () => {
     return (
@@ -33,7 +32,7 @@ const IntroSection = () => {
                         <div className="bg-emerald-50 p-6 md:p-8 rounded-2xl shadow-lg transform hover:-translate-y-1 transition-transform duration-300">
                             <h3 className="text-xl font-semibold text-emerald-800 mb-4">Our Community Impact</h3>
                             <p className="text-gray-700 leading-relaxed">
-                                From the urban centers of Garissa town to the remote pastoral communities, our reach extends across the diverse landscapes of our county. We've established a network of community advocates and support systems that understand the unique challenges faced by survivors in our region. Our mobile outreach programs ensure that even the most remote communities have access to essential support and information.
+                                From the urban centers of Garissa town to the remote pastoral communities, our reach extends across the diverse landscapes of our county. We&apos;ve established a network of community advocates and support systems that understand the unique challenges faced by survivors in our region. Our mobile outreach programs ensure that even the most remote communities have access to essential support and information.
                             </p>
                             <p className="text-gray-700 leading-relaxed mt-4">
                                 Through innovative programs like our &apos;Sister&apos;s Circle&apos; support groups and &apos;Youth Champions&apos; initiatives, we&apos;re creating sustainable change from within our communities. These programs combine traditional conflict resolution methods with modern counseling approaches, providing culturally appropriate support that resonates with our local context. Our partnerships with local women&apos;s groups and youth organizations have created a strong foundation for community-led responses to GBV.

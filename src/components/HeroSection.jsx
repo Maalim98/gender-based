@@ -1,6 +1,6 @@
-import React from 'react';
 import { FaPhone, FaArrowRight } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
+import slide2 from '../assets/images/slide2.jpg';
 
 const HeroSection = () => {
   const navigate = useNavigate();
@@ -55,7 +55,7 @@ const HeroSection = () => {
           {/* Right Content - Image */}
           <div className="hidden md:block">
             <img 
-              src="./src/assets/images/slide2.jpg" 
+              src={slide2} 
               alt="Support and Hope" 
               className="rounded-xl shadow-2xl"
             />
