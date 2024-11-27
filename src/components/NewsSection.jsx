@@ -1,10 +1,12 @@
 import { FaCalendar, FaExternalLinkAlt } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
-import supportCenter from '../assets/images/support center.jpg';
-import awareness from '../assets/images/awareness2.jpg';
-import meeting from '../assets/images/meeting.jpg';
+
 import { mobileClasses } from '../styles/responsive';
 import ResponsiveContainer from './layout/ResponsiveContainer';
+
+import supportCenter from "../assets/images/support center.jpg"
+import awareness from "../assets/images/awareness.jpg"
+import meeting from "../assets/images/meeting.jpg"
 
 const NewsSection = () => {
   const news = [
@@ -37,7 +39,12 @@ const NewsSection = () => {
   return (
     <section className={mobileClasses.section}>
       <ResponsiveContainer>
-        <h2 className={mobileClasses.heading}>Latest Updates</h2>
+        <div className="text-center mb-8">
+          <h2 className={`${mobileClasses.heading} text-3xl font-bold text-emerald-800`}>
+            Latest Updates
+          </h2>
+          <div className="h-1 w-24 bg-gradient-to-r from-emerald-500 to-yellow-400 mx-auto mt-4"></div>
+        </div>
         <div className={`grid gap-8 ${mobileClasses.grid}`}>
           {news.map((item) => (
             <Link 

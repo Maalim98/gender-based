@@ -1,9 +1,6 @@
 import { FaHome, FaPhone, FaShieldAlt, FaStar, FaCalendar, FaBook, FaHeart } from 'react-icons/fa';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import awareness from '../../assets/images/awareness2.jpg';
-import woman5 from '../../assets/images/woman5.jpg';
-import xalimo from '../../assets/images/xalimo.jpg';
+import { imagePaths } from '../../utils/imageLoader';
 
 const Empowerment = () => {
   const programs = [
@@ -50,14 +47,14 @@ const Empowerment = () => {
       name: "Amina Hassan",
       role: "GBV Survivor & Advocate",
       story: "Through the empowerment program, I found my voice and strength. Today, I lead support groups and help other survivors rebuild their lives.",
-      image: woman5,
+      image: imagePaths.woman5,
       impact: "Leads 3 Support Groups"
     },
     {
       name: "Fatuma Omar",
       role: "Community Leader",
       story: "The program gave me tools to support other women in my community. We're breaking the silence around GBV together.",
-      image: xalimo,
+      image: imagePaths.xalimo,
       impact: "Trained 50+ Women"
     }
   ];
@@ -116,7 +113,7 @@ const Empowerment = () => {
       <div className="relative h-screen">
         <div className="absolute inset-0">
           <img 
-            src={awareness} 
+            src={imagePaths.awareness} 
             alt="Empowerment"
             className="w-full h-full object-cover"
           />

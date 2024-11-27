@@ -1,11 +1,12 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import woman1 from '../assets/images/woman1.jpg';
-import woman2 from '../assets/images/woman2.jpg';
-import woman3 from '../assets/images/woman3.jpg';
-import woman4 from '../assets/images/woman4.jpg';
-import xalimo from '../assets/images/xalimo.jpg';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { motion, AnimatePresence } from 'framer-motion';
+
+import woman1 from "../assets/images/woman1.jpg";
+import woman2 from "../assets/images/woman2.jpg";
+import woman3 from "../assets/images/woman3.jpg";
+import woman4 from "../assets/images/woman4.jpg";
+import xalimo from "../assets/images/xalimo.jpg";
 
 const ImpactStoriesSection = () => {
     const [activeTestimonial, setActiveTestimonial] = useState(0);
@@ -18,7 +19,7 @@ const ImpactStoriesSection = () => {
             a lot. At some point she wanted to commit suicide. I interrogated her to find out what was wrong and she 
             told me what the pastor had done to her. I took her to Karen hospital where we found out she was pregnant. 
             We were then reffered to GVRC. Getting to learn what the pastor had done was so painful to me.`,
-            image: woman1,
+            image: woman1
         },
         {
             name: "Amina Hassan Mohamed",
@@ -26,7 +27,7 @@ const ImpactStoriesSection = () => {
             story: `As a community leader in Eastleigh, I've seen many women suffer in silence. When I discovered GVRC, 
             it became a beacon of hope. We've helped over 50 women from our community access counseling and medical care. 
             The cultural sensitivity and respect shown by the staff has made a huge difference in breaking down barriers.`,
-            image: woman2,
+            image: woman2
         },
         {
             name: "Fatuma Abdi Nur",
@@ -34,7 +35,7 @@ const ImpactStoriesSection = () => {
             story: `After my experience, I felt lost and ashamed. GVRC not only helped me heal but also empowered me 
             to become a voice for others. Today, I lead support groups for young Somali women, showing them that 
             seeking help is not a sign of weakness but of strength.`,
-            image: woman3,
+            image:woman3
         },
         {
             name: "Zahra Ibrahim Ahmed",
@@ -42,7 +43,7 @@ const ImpactStoriesSection = () => {
             story: `Working with teenage survivors has shown me how crucial early intervention is. One young girl's 
             story particularly moved me - she went from barely speaking to becoming a peer counselor herself. GVRC's 
             approach to healing considers both emotional and cultural aspects.`,
-            image: woman4,
+            image: woman4
         },
         {
             name: "Halima Omar Sheikh",
@@ -50,7 +51,7 @@ const ImpactStoriesSection = () => {
             story: `When I started the women's support group, many were hesitant to share. Now, our sessions are a 
             safe space where healing happens collectively. We've created a sisterhood that extends beyond our weekly 
             meetings, supporting each other through recovery and growth.`,
-            image: xalimo,
+            image: xalimo
         },
     ];
 
@@ -83,31 +84,25 @@ const ImpactStoriesSection = () => {
                                 <div className="relative h-64 md:h-auto w-full md:w-1/2">
                                     <img
                                         src={testimonials[activeTestimonial].image}
-                                        alt=""
+                                        alt={testimonials[activeTestimonial].name}
                                         className="w-full h-full object-cover"
                                     />
-                                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                                    <div className="absolute bottom-4 left-4 text-white">
+                                        <h3 className="text-xl font-bold">{testimonials[activeTestimonial].name}</h3>
+                                        <p className="text-sm text-emerald-300">{testimonials[activeTestimonial].role}</p>
+                                    </div>
                                 </div>
 
-                                {/* Content Side */}
-                                <div className="relative w-full md:w-1/2 h-full">
-                                    <div className="p-6 md:p-8 h-full flex flex-col justify-center">
-                                        <div className="space-y-4">
-                                            <h3 className="text-lg md:text-xl font-bold text-emerald-700">
-                                                {testimonials[activeTestimonial].role}
-                                            </h3>
-                                            <p className="text-gray-600 text-sm md:text-base leading-relaxed">
-                                                {testimonials[activeTestimonial].story}
-                                            </p>
-                                            <p className="font-semibold text-gray-900">
-                                                {testimonials[activeTestimonial].name}
-                                            </p>
-                                        </div>
-                                    </div>
+                                {/* Text Side */}
+                                <div className="p-6 md:p-8 md:w-1/2 flex flex-col justify-center">
+                                    <p className="text-gray-600 text-lg leading-relaxed">
+                                        {testimonials[activeTestimonial].story}
+                                    </p>
                                 </div>
                             </div>
 
-                            {/* Navigation dots */}
+                            {/* Navigation Dots */}
                             <div className="flex justify-center p-4 bg-gray-50">
                                 {testimonials.map((_, index) => (
                                     <button
@@ -122,6 +117,7 @@ const ImpactStoriesSection = () => {
                         </motion.div>
                     </AnimatePresence>
                 </div>
+
                 {/* Add More Testimonials Button */}
                 <div className="text-center">
                     <Link 

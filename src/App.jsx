@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import Footer from './components/Footer';
@@ -18,12 +18,12 @@ import AllUpdates from './pages/news/AllUpdates';
 
 const App = () => {
   return (
-    <Router>
+    <BrowserRouter>
       <div className="min-h-screen flex flex-col">
         <Navbar />
         <main className="flex-grow">
           <Routes>
-            <Route exact path="/" element={<Home />} />
+            <Route path="/" element={<Home />} />
             <Route path="/who-we-are/about" element={<AboutUs />} />
             <Route path="/who-we-are/team" element={<OurTeam />} />
             <Route path="/who-we-are/board" element={<BoardOfTrustees />} />
@@ -39,7 +39,7 @@ const App = () => {
         </main>
         <Footer />
       </div>
-    </Router>
+    </BrowserRouter>
   );
 };
 

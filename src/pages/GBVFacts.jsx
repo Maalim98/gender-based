@@ -1,5 +1,4 @@
 import { FaBookOpen, FaExternalLinkAlt, FaHandHoldingHeart, FaShieldAlt, FaPhone } from 'react-icons/fa';
-import { motion } from 'framer-motion';
 
 function GBVFacts() {
   const statistics = [
