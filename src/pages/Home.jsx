@@ -1,25 +1,30 @@
-import React from 'react';
 import HeroSection from '../components/HeroSection';
-
-import EmergencySection from './EmergencySection';
-import ResourcesSection from '../components/ResourcesSection';
-import IntroSection from '../components/IntroSection';  // Add this import
-import ImpactStoriesSection from '../components/ImpactStoriesSection';
+import IntroSection from '../components/IntroSection';
 import ServicesSection from '../components/ServicesSection';
+import ImpactStoriesSection from '../components/ImpactStoriesSection';
+import TestimonialsSection from '../components/TestimonialsSection';
+import ResourcesSection from '../components/ResourcesSection';
+import NewsSection from '../components/NewsSection';
+import FAQSection from '../components/FAQSection';
+import PartnersSection from '../components/PatnersSection';
+
+
 const Home = () => {
   return (
-    <main className="flex-grow">
+    <div className="min-h-screen">
       <HeroSection />
-      
-      <ResourcesSection /> 
-      {/* <EmergencySection /> */}
       <IntroSection />
-      <ImpactStoriesSection></ImpactStoriesSection>
-      <ServicesSection />
       
-        {/* Add the IntroSection here */}
-        
-    </main>
+      
+      <TestimonialsSection />
+      <ResourcesSection />
+      <NewsSection />
+      <ImpactStoriesSection />
+      <FAQSection />
+      <ServicesSection />
+      <PartnersSection />
+      
+    </div>
   );
 };
 

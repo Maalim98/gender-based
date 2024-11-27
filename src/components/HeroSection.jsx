@@ -10,28 +10,28 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="bg-teal-800 text-white py-16 md:py-24">
+    <section className="bg-teal-800 text-white py-8 md:py-24">
       <div className="container mx-auto px-4">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
           {/* Left Content */}
-          <div className="space-y-6">
-            <h1 className="text-4xl md:text-5xl font-bold leading-tight">
+          <div className="space-y-4 md:space-y-6">
+            <h1 className="text-3xl md:text-5xl font-bold leading-tight">
               Your Safety Matters
               <br />
               We&apos;re Here to Help
             </h1>
-            <p className="text-xl text-gray-200">
+            <p className="text-lg md:text-xl text-gray-200">
               Confidential support available 24/7 for survivors of gender-based violence.
             </p>
             
             {/* Emergency Contact Box */}
-            <div className="bg-white/10 p-6 rounded-lg inline-block">
+            <div className="bg-white/10 p-4 md:p-6 rounded-lg inline-block w-full md:w-auto">
               <div className="flex items-center space-x-4">
-                <FaPhone className="text-teal-300 text-2xl animate-bounce" />
+                <FaPhone className="text-teal-300 text-xl md:text-2xl animate-bounce" />
                 <div>
                   <p className="text-sm">Emergency Helpline</p>
-                  <a href="tel:0800720565" className="text-3xl font-bold text-teal-300">
-                    0800 720 565
+                  <a href="tel:0717069813" className="text-2xl md:text-3xl font-bold text-teal-300">
+                    0717 069 813
                   </a>
                 </div>
               </div>
@@ -41,12 +41,12 @@ const HeroSection = () => {
             <div className="flex flex-col sm:flex-row gap-4">
               <button 
                 onClick={handleEmergencyClick}
-                className="bg-red-600 px-8 py-4 rounded-lg hover:bg-red-700 transition-all flex items-center justify-center space-x-2 text-lg font-semibold"
+                className="w-full md:w-auto bg-red-600 px-6 md:px-8 py-3 md:py-4 rounded-lg hover:bg-red-700 transition-all flex items-center justify-center space-x-2 text-base md:text-lg font-semibold"
               >
                 <span>Get Help Now</span>
                 <FaArrowRight />
               </button>
-              <button className="border-2 border-white px-8 py-4 rounded-lg hover:bg-white hover:text-teal-800 transition-all text-lg font-semibold">
+              <button className="w-full md:w-auto border-2 border-white px-6 md:px-8 py-3 md:py-4 rounded-lg hover:bg-white hover:text-teal-800 transition-all text-base md:text-lg font-semibold">
                 Learn More
               </button>
             </div>
@@ -57,7 +57,7 @@ const HeroSection = () => {
             <img 
               src={slide2} 
               alt="Support and Hope" 
-              className="rounded-xl shadow-2xl"
+              className="rounded-xl shadow-2xl w-full"
             />
           </div>
         </div>

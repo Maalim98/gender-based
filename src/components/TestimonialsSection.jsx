@@ -7,9 +7,9 @@ const TestimonialsSection = () => {
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-gray-50 p-6 rounded-lg">
               <p className="text-gray-600 italic mb-4">
-                "The support I received helped me rebuild my life. I am now stronger and helping others."
+                &ldquo;The support I received helped me rebuild my life. I am now stronger and helping others.&rdquo;
               </p>
-              <div className="text-teal-600 font-semibold">Survivor, Age 28</div>
+              <div className="text-teal-600 font-semibold">Community Leader</div>
             </div>
             {/* Add more testimonials */}
           </div>

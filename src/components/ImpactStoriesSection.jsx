@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import woman5 from '../assets/images/woman5.jpg';
+import woman1 from '../assets/images/woman1.jpg';
+import woman2 from '../assets/images/woman2.jpg';
+import woman3 from '../assets/images/woman3.jpg';
+import woman4 from '../assets/images/woman4.jpg';
 import xalimo from '../assets/images/xalimo.jpg';
+import { Link } from 'react-router-dom';
 
 const ImpactStoriesSection = () => {
     const [activeTestimonial, setActiveTestimonial] = useState(0);
@@ -15,7 +18,7 @@ const ImpactStoriesSection = () => {
             a lot. At some point she wanted to commit suicide. I interrogated her to find out what was wrong and she 
             told me what the pastor had done to her. I took her to Karen hospital where we found out she was pregnant. 
             We were then reffered to GVRC. Getting to learn what the pastor had done was so painful to me.`,
-            image: xalimo,
+            image: woman1,
         },
         {
             name: "Amina Hassan Mohamed",
@@ -23,7 +26,7 @@ const ImpactStoriesSection = () => {
             story: `As a community leader in Eastleigh, I've seen many women suffer in silence. When I discovered GVRC, 
             it became a beacon of hope. We've helped over 50 women from our community access counseling and medical care. 
             The cultural sensitivity and respect shown by the staff has made a huge difference in breaking down barriers.`,
-            image: woman5,
+            image: woman2,
         },
         {
             name: "Fatuma Abdi Nur",
@@ -31,7 +34,7 @@ const ImpactStoriesSection = () => {
             story: `After my experience, I felt lost and ashamed. GVRC not only helped me heal but also empowered me 
             to become a voice for others. Today, I lead support groups for young Somali women, showing them that 
             seeking help is not a sign of weakness but of strength.`,
-            image: xalimo,
+            image: woman3,
         },
         {
             name: "Zahra Ibrahim Ahmed",
@@ -39,7 +42,7 @@ const ImpactStoriesSection = () => {
             story: `Working with teenage survivors has shown me how crucial early intervention is. One young girl's 
             story particularly moved me - she went from barely speaking to becoming a peer counselor herself. GVRC's 
             approach to healing considers both emotional and cultural aspects.`,
-            image: woman5,
+            image: woman4,
         },
         {
             name: "Halima Omar Sheikh",
@@ -47,38 +50,8 @@ const ImpactStoriesSection = () => {
             story: `When I started the women's support group, many were hesitant to share. Now, our sessions are a 
             safe space where healing happens collectively. We've created a sisterhood that extends beyond our weekly 
             meetings, supporting each other through recovery and growth.`,
-            image: woman5,
-        },
-        
-    ];
-
-    const stories = [
-        {
-            title: "Empowering Rural Communities",
-            description: "Reaching out to remote areas with essential support services",
             image: xalimo,
-            tag: "Community Outreach",
-            route: "/community-outreach",
-            color: "from-emerald-500/20 to-teal-500/20"
         },
-        {
-            title: "Breaking the Silence",
-            description: "National campaign reaching thousands across Kenya",
-            image: woman5,
-            tag: "Awareness",
-            route: "/awareness-campaigns",
-            color: "from-yellow-500/20 to-orange-500/20"
-        },
-        {
-            title: "Healing Through Community",
-            description: "New support center opened in Nakuru County",
-            image: xalimo,
-            tag: "Support Programs",
-            route: "/support-programs",
-            color: "from-purple-500/20 to-pink-500/20"
-        }
-
-
     ];
 
     return (
@@ -149,56 +122,13 @@ const ImpactStoriesSection = () => {
                         </motion.div>
                     </AnimatePresence>
                 </div>
-
-                {/* Stories Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-                    {stories.map((story, index) => (
-                        <Link to={story.route} key={index} className="group">
-                            <div className="relative bg-white rounded-xl shadow-md overflow-hidden h-full">
-                                {/* Image Container */}
-                                <div className="relative h-48 md:h-56 overflow-hidden">
-                                    <img 
-                                        src={story.image}
-                                        alt={story.title}
-                                        className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300"
-                                    />
-                                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
-                                    
-                                    {/* Tag */}
-                                    <div className="absolute top-3 right-3">
-                                        <span className="bg-white/90 text-emerald-600 text-xs md:text-sm font-semibold px-3 py-1 rounded-full">
-                                            {story.tag}
-                                        </span>
-                                    </div>
-                                </div>
-
-                                {/* Content */}
-                                <div className="p-4 md:p-6">
-                                    <h3 className="text-lg md:text-xl font-bold text-emerald-800 mb-2">
-                                        {story.title}
-                                    </h3>
-                                    <p className="text-sm md:text-base text-gray-600 mb-4">
-                                        {story.description}
-                                    </p>
-                                    <div className="flex items-center text-emerald-500 text-sm md:text-base">
-                                        Read More 
-                                        <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                                        </svg>
-                                    </div>
-                                </div>
-                            </div>
-                        </Link>
-                    ))}
-                </div>
-
-                {/* View More Button */}
-                <div className="text-center mt-8 md:mt-12">
+                {/* Add More Testimonials Button */}
+                <div className="text-center">
                     <Link 
-                        to="/all-stories" 
-                        className="inline-flex items-center justify-center w-full md:w-auto px-6 py-3 bg-emerald-600 text-white text-sm md:text-base font-medium rounded-full hover:bg-emerald-700 transition-colors"
+                        to="/gbv-facts" 
+                        className="inline-flex items-center justify-center px-6 py-3 bg-emerald-600 text-white text-base font-medium rounded-full hover:bg-emerald-700 transition-colors"
                     >
-                        View More Stories
+                        Learn More About GBV
                         <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
                         </svg>

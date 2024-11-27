@@ -58,7 +58,7 @@ const IntroSection = () => {
                                         <div className="bg-white/10 backdrop-blur-md p-6 md:p-8 rounded-3xl border border-white/20">
                                             <span className="text-yellow-400 text-4xl md:text-5xl font-light">❝</span>
                                             <p className="text-white text-xl md:text-3xl font-light mt-2 mb-4 leading-relaxed">
-                                                Together, we're building a future where
+                                                Together, we&apos;re building a future where
                                                 <span className="block text-2xl md:text-4xl font-semibold text-emerald-400 my-2">
                                                     every voice is heard
                                                 </span>

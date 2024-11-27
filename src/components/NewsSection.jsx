@@ -1,56 +1,82 @@
-import React from 'react';
-import { FaCalendar } from 'react-icons/fa';
+import { FaCalendar, FaExternalLinkAlt } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
+import supportCenter from '../assets/images/support center.jpg';
+import awareness from '../assets/images/awareness2.jpg';
+import meeting from '../assets/images/meeting.jpg';
+import { mobileClasses } from '../styles/responsive';
+import ResponsiveContainer from './layout/ResponsiveContainer';
 
 const NewsSection = () => {
   const news = [
     {
       date: "2024-03-20",
-      title: "New Support Center Opening",
-      excerpt: "We're expanding our services with a new center in Nairobi.",
-      image: "/images/news/center.jpg"
+      title: "Women's Economic Empowerment Hub",
+      excerpt: "Join our revolutionary program combining skills training, business mentorship, and healing support. Building economic independence for survivors.",
+      image: supportCenter,
+      link: "/news/empowerment",
+      tag: "Empowerment"
     },
     {
       date: "2024-03-15",
-      title: "Community Awareness Program",
-      excerpt: "Join our upcoming awareness sessions in your community.",
-      image: "/images/news/awareness.jpg"
+      title: "Mobile Outreach Success",
+      excerpt: "Our mobile teams have reached 15 remote villages this month, providing essential services and emergency support.",
+      image: awareness,
+      link: "/news/outreach",
+      tag: "Outreach"
     },
     {
       date: "2024-03-10",
-      title: "Support Group Meetings",
-      excerpt: "Weekly support group meetings now available online.",
-      image: "/images/news/support.jpg"
+      title: "Community Support Network",
+      excerpt: "Local leaders unite to create safe spaces and support systems across Garissa County.",
+      image: meeting,
+      link: "/news/network",
+      tag: "Community"
     }
   ];
 
   return (
-    <section className="py-16 bg-gray-50">
-      <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-12">Latest Updates</h2>
-        
-        <div className="grid md:grid-cols-3 gap-8">
+    <section className={mobileClasses.section}>
+      <ResponsiveContainer>
+        <h2 className={mobileClasses.heading}>Latest Updates</h2>
+        <div className={`grid gap-8 ${mobileClasses.grid}`}>
           {news.map((item) => (
-            <div key={item.title} className="bg-white rounded-lg shadow-md overflow-hidden">
-              <img 
-                src={item.image} 
-                alt={item.title}
-                className="w-full h-48 object-cover"
-              />
+            <Link 
+              to={item.link}
+              key={item.title}
+              className="bg-white rounded-xl shadow-md overflow-hidden transform hover:-translate-y-1 transition-all duration-300"
+            >
+              <div className="relative">
+                <img 
+                  src={item.image} 
+                  alt={item.title}
+                  className="w-full h-48 object-cover"
+                />
+                <div className="absolute top-4 right-4">
+                  <span className="bg-white/90 text-emerald-600 text-xs font-semibold px-3 py-1 rounded-full">
+                    {item.tag}
+                  </span>
+                </div>
+              </div>
               <div className="p-6">
                 <div className="flex items-center text-gray-500 mb-2">
                   <FaCalendar className="mr-2" />
-                  {new Date(item.date).toLocaleDateString()}
+                  {new Date(item.date).toLocaleDateString('en-US', {
+                    year: 'numeric',
+                    month: 'long',
+                    day: 'numeric'
+                  })}
                 </div>
-                <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
-                <p className="text-gray-600">{item.excerpt}</p>
-                <button className="mt-4 text-teal-600 font-semibold hover:text-teal-700">
-                  Read More →
-                </button>
+                <h3 className="text-xl font-semibold mb-2 text-gray-800">{item.title}</h3>
+                <p className="text-gray-600 mb-4 line-clamp-3">{item.excerpt}</p>
+                <div className="flex items-center text-emerald-600 font-medium group">
+                  Read Full Story 
+                  <FaExternalLinkAlt className="ml-2 text-sm transition-transform group-hover:translate-x-1" />
+                </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
-      </div>
+      </ResponsiveContainer>
     </section>
   );
 };
