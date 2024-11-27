@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import woman1 from "../assets/images/woman1.jpg";
-import woman2 from "../assets/images/woman2.jpg";
+import woman4 from "../assets/images/woman2.jpg";
 import woman3 from "../assets/images/woman3.jpg";
-import woman4 from "../assets/images/woman4.jpg";
+
 import xalimo from "../assets/images/xalimo.jpg";
 
 const ImpactStoriesSection = () => {
@@ -27,7 +27,7 @@ const ImpactStoriesSection = () => {
             story: `As a community leader in Eastleigh, I've seen many women suffer in silence. When I discovered GVRC, 
             it became a beacon of hope. We've helped over 50 women from our community access counseling and medical care. 
             The cultural sensitivity and respect shown by the staff has made a huge difference in breaking down barriers.`,
-            image: woman2
+            image: woman4
         },
         {
             name: "Fatuma Abdi Nur",
