@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { FaChevronDown, FaChevronUp } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 const FAQSection = () => {
   const faqs = [
@@ -48,6 +49,18 @@ const FAQSection = () => {
               answer={faq.answer}
             />
           ))}
+        </div>
+
+        <div className="text-center mt-12">
+          <Link 
+            to="/gbv-facts" 
+            className="inline-flex items-center justify-center px-6 py-3 bg-emerald-600 text-white text-base font-medium rounded-full hover:bg-emerald-700 transition-colors"
+          >
+            Learn More About GBV
+            <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
+            </svg>
+          </Link>
         </div>
       </div>
     </section>

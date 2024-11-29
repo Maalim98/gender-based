@@ -1,4 +1,5 @@
 import communitySupport from '../assets/images/woman5.jpg';
+import { FaHeart, FaHandsHelping, FaUsers, FaStar } from 'react-icons/fa';
 
 const IntroSection = () => {
     return (
@@ -15,31 +16,66 @@ const IntroSection = () => {
                 </div>
 
                 <div className="max-w-6xl mx-auto space-y-12">
-                    <div className="grid md:grid-cols-2 gap-8 md:gap-12">
-                        <div className="bg-white p-6 md:p-8 rounded-2xl shadow-lg transform hover:-translate-y-1 transition-transform duration-300">
-                            <div className="text-4xl md:text-5xl text-emerald-600 mb-4">❝</div>
-                            <p className="text-gray-700 leading-relaxed">
-                                In the heart of Garissa County, we stand as a vital sanctuary for survivors of gender-based violence. Our community-based organization brings together local expertise with cultural sensitivity, ensuring that our services resonate deeply with the unique needs of our community. Through understanding and respect for our rich cultural heritage, we&apos;ve created safe spaces where survivors find strength in their journey to healing.
-                            </p>
-                            <p className="text-gray-700 leading-relaxed mt-4">
-                                Working hand-in-hand with community elders, religious leaders, and local authorities, we&apos;ve built trust and understanding across different segments of our society. Our approach combines traditional wisdom with modern support systems, creating a bridge between cultural values and essential support services. This unique blend allows us to address GBV issues while maintaining respect for our community&apos;s traditions.
-                            </p>
-                            <p className="text-gray-700 leading-relaxed mt-4">
-                                Our dedicated team, composed primarily of local community members, brings not just professional expertise but also deep cultural understanding to their work. This connection allows us to break down barriers and create meaningful dialogue about gender-based violence in ways that resonate with our community&apos;s values and experiences.
-                            </p>
+                    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+                            <FaHeart className="text-3xl text-emerald-600 mb-4" />
+                            <h3 className="text-lg font-semibold text-emerald-800 mb-2">Compassionate Care</h3>
+                            <p className="text-gray-600">Providing empathetic support and understanding to every survivor who walks through our doors.</p>
+                        </div>
+                        <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+                            <FaHandsHelping className="text-3xl text-emerald-600 mb-4" />
+                            <h3 className="text-lg font-semibold text-emerald-800 mb-2">Cultural Sensitivity</h3>
+                            <p className="text-gray-600">Blending traditional wisdom with modern support systems to serve our community effectively.</p>
+                        </div>
+                        <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+                            <FaUsers className="text-3xl text-emerald-600 mb-4" />
+                            <h3 className="text-lg font-semibold text-emerald-800 mb-2">Community First</h3>
+                            <p className="text-gray-600">Working hand-in-hand with local leaders to create lasting positive change.</p>
+                        </div>
+                        <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+                            <FaStar className="text-3xl text-emerald-600 mb-4" />
+                            <h3 className="text-lg font-semibold text-emerald-800 mb-2">Excellence</h3>
+                            <p className="text-gray-600">Delivering high-quality support services that transform lives.</p>
+                        </div>
+                    </div>
+
+                    <div className="grid md:grid-cols-2 gap-8 mt-12">
+                        <div className="bg-white p-8 rounded-2xl shadow-lg transform hover:-translate-y-1 transition-transform duration-300">
+                            <h3 className="text-xl font-semibold text-emerald-800 mb-4">Our Story</h3>
+                            <div className="space-y-4">
+                                <p className="text-gray-700 leading-relaxed">
+                                    In the heart of Garissa County, we stand as a vital sanctuary for survivors of gender-based violence. Our community-based organization combines local expertise with cultural sensitivity to create safe spaces where healing begins.
+                                </p>
+                                <div className="border-l-4 border-emerald-500 pl-4 my-6">
+                                    <p className="text-emerald-800 italic">
+                                        "Building bridges between traditional wisdom and modern support systems"
+                                    </p>
+                                </div>
+                                <p className="text-gray-700 leading-relaxed">
+                                    Our dedicated team of local community members brings both professional expertise and deep cultural understanding to their work, breaking down barriers and creating meaningful dialogue about gender-based violence.
+                                </p>
+                            </div>
                         </div>
 
-                        <div className="bg-emerald-50 p-6 md:p-8 rounded-2xl shadow-lg transform hover:-translate-y-1 transition-transform duration-300">
-                            <h3 className="text-xl font-semibold text-emerald-800 mb-4">Our Community Impact</h3>
-                            <p className="text-gray-700 leading-relaxed">
-                                From the urban centers of Garissa town to the remote pastoral communities, our reach extends across the diverse landscapes of our county. We&apos;ve established a network of community advocates and support systems that understand the unique challenges faced by survivors in our region. Our mobile outreach programs ensure that even the most remote communities have access to essential support and information.
-                            </p>
-                            <p className="text-gray-700 leading-relaxed mt-4">
-                                Through innovative programs like our &apos;Sister&apos;s Circle&apos; support groups and &apos;Youth Champions&apos; initiatives, we&apos;re creating sustainable change from within our communities. These programs combine traditional conflict resolution methods with modern counseling approaches, providing culturally appropriate support that resonates with our local context. Our partnerships with local women&apos;s groups and youth organizations have created a strong foundation for community-led responses to GBV.
-                            </p>
-                            <p className="text-gray-700 leading-relaxed mt-4">
-                                We&apos;re particularly proud of our work in economic empowerment, where we&apos;ve helped survivors build independence through skills training and micro-enterprise support. Our &apos;Healing Through Heritage&apos; program combines traditional crafts with therapy, creating both emotional healing and economic opportunities. By working closely with local businesses and vocational training centers, we&apos;re building pathways to financial independence for survivors.
-                            </p>
+                        <div className="bg-emerald-50 p-8 rounded-2xl shadow-lg transform hover:-translate-y-1 transition-transform duration-300">
+                            <h3 className="text-xl font-semibold text-emerald-800 mb-4">Our Impact</h3>
+                            <div className="space-y-4">
+                                <div className="flex items-center gap-4 mb-6">
+                                    <div className="bg-emerald-100 p-3 rounded-full">
+                                        <span className="text-2xl text-emerald-600">58K+</span>
+                                    </div>
+                                    <p className="text-gray-700">Survivors supported across Garissa County</p>
+                                </div>
+                                <p className="text-gray-700 leading-relaxed">
+                                    From urban centers to remote pastoral communities, our reach extends across the diverse landscapes of our county through:
+                                </p>
+                                <ul className="list-disc list-inside text-gray-700 space-y-2 ml-4">
+                                    <li>Mobile outreach programs</li>
+                                    <li>'Sister's Circle' support groups</li>
+                                    <li>'Youth Champions' initiatives</li>
+                                    <li>Economic empowerment programs</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
 

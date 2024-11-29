@@ -1,88 +1,63 @@
-import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaFacebook, FaTwitter, FaInstagram, FaArrowRight, FaHeart } from 'react-icons/fa';
+import React from 'react';
 import { Link } from 'react-router-dom';
+import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaFacebook, FaTwitter, FaInstagram } from 'react-icons/fa';
 
 const Footer = () => {
-  const quickLinks = [
-    { name: "Emergency Help", path: "/emergency" },
-    { name: "Our Services", path: "/services" },
-    { name: "About Us", path: "/who-we-are/about" },
-    { name: "Resources", path: "/resources" },
-    { name: "Contact", path: "/contact" }
-  ];
-
-  const supportLinks = [
-    { name: "24/7 Helpline", path: "tel:0717069813" },
-    { name: "Safe Houses", path: "/services#safe-houses" },
-    { name: "Legal Support", path: "/services#legal" },
-    { name: "Counseling", path: "/services#counseling" },
-    { name: "Report GBV", path: "/report" }
-  ];
-
   return (
-    <footer className="bg-gradient-to-b from-gray-900 to-gray-950 text-gray-300">
-      {/* Emergency Banner */}
-      <div className="bg-red-600 py-4">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row items-center justify-between">
-            <div className="flex items-center mb-4 md:mb-0">
-              <FaPhone className="text-white mr-3 animate-pulse" />
-              <span className="text-white font-medium">Need Immediate Help?</span>
+    <footer className="relative bg-gradient-to-br from-emerald-900 via-emerald-800 to-emerald-900">
+      {/* Decorative Top Border */}
+      <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-emerald-400 via-teal-400 to-emerald-400"></div>
+
+      {/* Main Content */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-8">
+        {/* Emergency Contact Banner */}
+        <div className="mb-16">
+          <div className="bg-gradient-to-r from-emerald-600 to-teal-600 rounded-xl p-6 md:p-8 flex flex-col md:flex-row justify-between items-center shadow-lg">
+            <div>
+              <h3 className="text-2xl md:text-3xl font-bold text-white mb-2">24/7 Emergency Helpline</h3>
+              <p className="text-emerald-100">Immediate support available anytime, anywhere</p>
             </div>
-            <div className="flex items-center space-x-4">
-              <a 
-                href="tel:0717069813" 
-                className="bg-white text-red-600 px-6 py-2 rounded-full font-bold hover:bg-red-100 transition-colors"
-              >
-                Call: 0717 069 813
-              </a>
-              <Link 
-                to="/emergency" 
-                className="bg-red-700 text-white px-6 py-2 rounded-full font-bold hover:bg-red-800 transition-colors"
-              >
-                Get Help Now
-              </Link>
-            </div>
+            <a 
+              href="tel:+254717069813" 
+              className="mt-4 md:mt-0 bg-white text-emerald-600 px-8 py-3 rounded-full font-bold text-lg hover:bg-emerald-50 transition-colors flex items-center gap-2 shadow-md"
+            >
+              <FaPhone className="animate-pulse" />
+              0717 069 813
+            </a>
           </div>
         </div>
-      </div>
 
-      <div className="container mx-auto px-4 py-12">
-        {/* Main Footer Content */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
-          {/* Organization Info */}
+        {/* Footer Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+          {/* About Section */}
           <div>
-            <h3 className="text-2xl font-bold text-white mb-6">GBV Support</h3>
-            <p className="text-gray-400 mb-6">
-              Dedicated to supporting survivors of gender-based violence and creating 
-              safer communities across Garissa County.
+            <img 
+              src="/path-to-your-logo-white.png" 
+              alt="GVRC Logo" 
+              className="h-16 w-auto mb-6"
+            />
+            <p className="text-emerald-100 leading-relaxed">
+              Empowering communities and supporting survivors in Garissa County through compassion, 
+              action, and lasting change.
             </p>
-            <div className="space-y-3">
-              <a href="tel:0717069813" className="flex items-center hover:text-white transition-colors">
-                <FaPhone className="mr-3 text-emerald-500" />
-                0717 069 813
-              </a>
-              <a href="mailto:ashrafzani585@gmail.com" className="flex items-center hover:text-white transition-colors">
-                <FaEnvelope className="mr-3 text-emerald-500" />
-                ashrafzani585@gmail.com
-              </a>
-              <div className="flex items-center">
-                <FaMapMarkerAlt className="mr-3 text-emerald-500" />
-                <span>Garissa, Kenya</span>
-              </div>
-            </div>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-xl font-semibold text-white mb-6">Quick Links</h3>
-            <ul className="space-y-3">
-              {quickLinks.map((link, index) => (
-                <li key={index}>
+            <h4 className="text-white text-lg font-semibold mb-6">Quick Links</h4>
+            <ul className="space-y-4">
+              {[
+                { name: 'About Us', path: '/who-we-are/about' },
+                { name: 'Our Services', path: '/services' },
+                { name: 'Get Help', path: '/emergency' },
+                { name: 'News & Updates', path: '/news' },
+                { name: 'Contact', path: '/contact' }
+              ].map((link) => (
+                <li key={link.name}>
                   <Link 
                     to={link.path}
-                    className="hover:text-white transition-colors flex items-center group"
+                    className="text-emerald-200 hover:text-white transition-colors inline-block"
                   >
-                    <FaArrowRight className="mr-2 text-sm opacity-0 group-hover:opacity-100 transition-opacity" />
                     {link.name}
                   </Link>
                 </li>
@@ -90,70 +65,15 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Support */}
+          {/* Contact Info */}
           <div>
-            <h3 className="text-xl font-semibold text-white mb-6">Support</h3>
-            <ul className="space-y-3">
-              {supportLinks.map((link, index) => (
-                <li key={index}>
-                  <Link 
-                    to={link.path}
-                    className="hover:text-white transition-colors flex items-center group"
-                  >
-                    <FaArrowRight className="mr-2 text-sm opacity-0 group-hover:opacity-100 transition-opacity" />
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
+            <h4 className="text-white text-lg font-semibold mb-6">Contact Us</h4>
+            <ul className="space-y-4">
+              <li className="flex items-start gap-3 text-emerald-200">
+                <FaMapMarkerAlt className="mt-1 flex-shrink-0" />
+                <span>Garissa County, Kenya<br />P.O. Box 123-70100</span>
+              </li>
             </ul>
-          </div>
-
-          {/* Newsletter */}
-          <div>
-            <h3 className="text-xl font-semibold text-white mb-6">Stay Connected</h3>
-            <p className="text-gray-400 mb-4">
-              Subscribe to our newsletter for updates and news about our work.
-            </p>
-            <form className="mb-6">
-              <div className="flex">
-                <input
-                  type="email"
-                  placeholder="Your email"
-                  className="bg-gray-800 text-white px-4 py-2 rounded-l-lg w-full focus:outline-none focus:ring-2 focus:ring-emerald-500"
-                />
-                <button
-                  type="submit"
-                  className="bg-emerald-600 text-white px-4 py-2 rounded-r-lg hover:bg-emerald-700 transition-colors"
-                >
-                  Subscribe
-                </button>
-              </div>
-            </form>
-            <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-emerald-500 transition-colors">
-                <FaFacebook size={24} />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-emerald-500 transition-colors">
-                <FaTwitter size={24} />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-emerald-500 transition-colors">
-                <FaInstagram size={24} />
-              </a>
-            </div>
-          </div>
-        </div>
-
-        {/* Bottom Bar */}
-        <div className="border-t border-gray-800 pt-8 mt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-gray-400 text-sm mb-4 md:mb-0">
-              © {new Date().getFullYear()} GBV Support. All rights reserved.
-            </p>
-            <div className="flex items-center text-gray-400 text-sm">
-              <span className="flex items-center">
-                Made with <FaHeart className="text-red-500 mx-1" /> in Garissa, Kenya
-              </span>
-            </div>
           </div>
         </div>
       </div>

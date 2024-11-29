@@ -89,7 +89,7 @@ const Navbar = () => {
                 className="flex items-center space-x-1 text-gray-700 hover:text-blue-800 transition-colors font-medium"
                 onClick={() => setDropdownOpen(!dropdownOpen)}
               >
-                <span>About Us</span>
+                <span>Who we are</span>
                 <FaChevronDown className={`transform transition-transform duration-200 ${dropdownOpen ? 'rotate-180' : ''}`} />
               </button>
 
@@ -109,10 +109,10 @@ const Navbar = () => {
                   className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-800 transition-colors"
                   onClick={handleLinkClick}
                 >
-                  About Us
+                  About us
                 </Link>
                 <Link
-                  to="/who-we-are/team"
+                  to="/who-we-are/OurTeam"
                   className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-800 transition-colors"
                   onClick={handleLinkClick}
                 >
