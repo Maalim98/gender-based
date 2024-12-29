@@ -1,148 +1,141 @@
-import { FaBookOpen, FaExternalLinkAlt, FaHandHoldingHeart, FaShieldAlt, FaPhone } from 'react-icons/fa';
+import React from 'react';
 
 function GBVFacts() {
-  const statistics = [
-    {
-      number: "1 in 3",
-      description: "Women globally experience physical or sexual violence",
-      detail: "Mostly by an intimate partner"
-    },
-    {
-      number: "45%",
-      description: "Kenyan women affected by GBV",
-      detail: "Ages 15-49"
-    },
-    {
-      number: "92%",
-      description: "Increase during COVID-19",
-      detail: "Jan-June 2020"
-    }
-  ];
-
-  const resources = [
-    {
-      title: "WHO Global Database",
-      description: "Access comprehensive research and statistics on violence against women",
-      link: "https://www.who.int/data/gho/data/themes/violence-against-women",
-      icon: "🌍"
-    },
-    {
-      title: "Kenya GBV Resources",
-      description: "Local support services and reporting mechanisms",
-      link: "https://www.health.go.ke",
-      icon: "🏥"
-    },
-    {
-      title: "Legal Framework",
-      description: "Understanding your rights and legal protections",
-      link: "/resources/legal",
-      icon: "⚖️"
-    }
-  ];
-
-  const supportServices = [
-    {
-      title: "Crisis Support",
-      description: "24/7 confidential counseling support",
-      icon: <FaPhone className="text-emerald-600" />
-    },
-    {
-      title: "Safe Housing",
-      description: "Emergency shelter and transitional housing",
-      icon: <FaShieldAlt className="text-emerald-600" />
-    },
-    {
-      title: "Support Services",
-      description: "Comprehensive care and counseling",
-      icon: <FaHandHoldingHeart className="text-emerald-600" />
-    }
-  ];
-
   return (
     <div className="min-h-screen bg-white">
-      {/* Hero Section */}
-      <div className="bg-emerald-900 py-20 px-4">
-        <div className="container mx-auto max-w-4xl text-center text-white">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">
-            Understanding Gender-Based Violence
+      <div className="max-w-4xl mx-auto px-4 py-8">
+        {/* First Section */}
+        <div className="text-center mb-12">
+          <h1 className="text-3xl font-bold inline-block relative">
+            Defining Gender Based Violence
           </h1>
-          <p className="text-xl text-emerald-100">
-            Knowledge is the first step towards prevention and support
+          <div className="border-t border-gray-300 mt-4"></div>
+        </div>
+
+        <div className="prose max-w-none">
+          {/* First paragraph with large T */}
+          <div className="flex">
+            <span className="text-6xl font-bold text-green-600 mr-2 leading-none">T</span>
+            <p className="text-gray-700">
+              there is no single definition for the term gender based violence (GBV). Global reports indicate that most violence is towards women and that the perpetrators are men. While women form the bulk of the statistics men and boys have also suffered GBV in different contexts.
+            </p>
+          </div>
+
+          <p className="my-6 text-gray-700">
+            Earlier definitions of GBV were geared toward violence against women and girls and in 1993, the first official definition was made. Delegates at the United Nations General Assembly defined violence against women as any act of gender-based violence that results in, or is likely to result in, physical, sexual or psychological harm or suffering to women, including threats of such acts, coercion or arbitrary deprivations of liberty, whether occurring in public or in private life. The definition further states that violence against women (VAW) is a manifestation of historically unequal power relations between men and women, which have led to the domination over and discrimination against women by men and to the prevention of the full advancement of women and that VAW is one of the crucial social mechanisms by which women are forced into a subordinate position compared with men (United Nations, 1993).
           </p>
-        </div>
-      </div>
 
-      {/* Main Content */}
-      <div className="container mx-auto px-4 py-16 max-w-6xl">
-        {/* Statistics */}
-        <div className="grid md:grid-cols-3 gap-8 mb-16">
-          {statistics.map((stat, index) => (
-            <div key={index} className="bg-white p-6 rounded-xl shadow-lg border border-emerald-100">
-              <div className="text-3xl font-bold text-emerald-600 mb-2">{stat.number}</div>
-              <div className="text-gray-800 font-medium mb-1">{stat.description}</div>
-              <div className="text-gray-500 text-sm">{stat.detail}</div>
-            </div>
-          ))}
-        </div>
+          <p className="my-6 text-gray-700">
+            In 1995, the Beijing Platform for Action expanded the definition to include: Violations of the rights of women in situations of armed conflict, including systematic rape, sexual slavery and forced pregnancy; forced sterilization, forced abortion, coerced or forced use of contraceptives; pre-natal sex selection and female infanticide. It further highlighted the most vulnerable women to GBV to include the elderly, the displaced, indigenous women, refugees and migrant communities, women living in impoverished rural or remote areas or women in detention (United Nations, 1996).
+          </p>
 
-        {/* Support Services */}
-        <div className="mb-16">
-          <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Available Support</h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            {supportServices.map((service, index) => (
-              <div key={index} className="bg-white p-8 rounded-xl shadow-lg text-center">
-                <div className="text-4xl mb-4">{service.icon}</div>
-                <h3 className="text-xl font-bold mb-2">{service.title}</h3>
-                <p className="text-gray-600">{service.description}</p>
-              </div>
-            ))}
+          <p className="my-6 text-gray-700">
+            Many countries have adopted and domesticated these definitions. Kenya has expanded the definition to include violence against men and boys. The Sexual Offences Act No. 3 that was revised in 2007 has captured these definitions and also recognizes males as victims of GBV. For GBV we use the pragmatic definition of 'a range of acts of violence committed against females because they are females and against males because they are males.'
+          </p>
+
+          {/* Second heading with border line */}
+          <div className="text-center my-12">
+            <h2 className="text-3xl font-bold inline-block relative">
+              What you need to know about Gender Based Violence
+            </h2>
+            <div className="border-t border-gray-300 mt-4"></div>
           </div>
         </div>
+        <div className="prose max-w-none mb-16">
+  <ul className="list-disc space-y-4 pl-5 text-gray-700">
+    <li>
+      Gender Based Violence is any act that results in physical, sexual or psychological harm or suffering, including threats of such acts, coercion or arbitrary deprivations of liberty, whether occurring in public or private life perpetrated against a person based on socially-ascribed (gender) differences between males and females.
+    </li>
+    
+    <li>
+      Violence is a common method used to dominate management of power relations
+    </li>
+    
+    <li>
+      GVRC has supported over 44,000 survivors since inception in 2001
+    </li>
+    
+    <li>
+      An estimate 3,000 survivors of GBV report at GVRC-NWH every year
+    </li>
+    
+    <li>
+      Men are the main perpetrators of violence. Exhibited by GVRC statistics at over 90% reported cases; KDHS 08/09; Kenya VAC 2010 revealing similar findings. This is not to put off the fact that women can be perpetrators as well.
+    </li>
+    
+    <li>
+      The female population is most affected with 56% women and 36% girls reported cases in GVRC.
+    </li>
+    
+    <li>
+      One-in-Three Kenyan females has experienced an episode of sexual violence before attaining age 18 (Kenya VAC 2010)
+    </li>
+    
+    <li>
+      Between 39% and 47% of Kenyan women experience GBV in their lifetime- among the highest rates in the world
+    </li>
+    
+    <li>
+      GBV towards pregnant women in Kenya is estimated to be 13.5%,17 a higher prevalence than that of many conditions normally screened for during pregnancy (KDHS 07/08)
+    </li>
+    
+    <li>
+      Men are survivors too with GVRC reported cases rating at 5% boys and 3% men
+    </li>
+    
+    <li>
+      One-in-Five Kenyan males has experienced an episode of sexual violence before attaining age 18 (Kenya VAC 2010)
+    </li>
+    
+    <li>
+      Domestic Violence -38% of ever-married women have ever experienced physical violence compared to 9% of ever-married men. 14% of ever-married women have ever experienced sexual violence compared to 4% of ever-married men. 41% of ever-married women have ever experienced physical or sexual violence, while 11% of ever-married men have ever experience either form of violence from a partner (KDHS 2014)
+    </li>
+  </ul>
+</div>
 
-        {/* Resources */}
-        <div className="mb-16">
-          <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Helpful Resources</h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            {resources.map((resource, index) => (
-              <a
-                key={index}
-                href={resource.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow"
-              >
-                <div className="flex items-start">
-                  <span className="text-3xl mr-4">{resource.icon}</span>
-                  <div>
-                    <h3 className="text-lg font-semibold text-gray-900 mb-2 flex items-center">
-                      {resource.title}
-                      <FaExternalLinkAlt className="ml-2 text-sm" />
-                    </h3>
-                    <p className="text-gray-600">{resource.description}</p>
-                  </div>
-                </div>
-              </a>
-            ))}
-          </div>
-        </div>
+        {/* Talk to us Section */}
+        <div className="mt-16">
+          <h2 className="text-2xl font-bold text-green-600 mb-8">Talk to us</h2>
+          
+          <form className="space-y-6">
+            <div>
+              <label htmlFor="name" className="block text-gray-700 mb-2">Your Name</label>
+              <input
+                type="text"
+                id="name"
+                className="w-full border border-gray-300 rounded-md p-2"
+              />
+            </div>
 
-        {/* Emergency Contact */}
-        <div className="bg-emerald-900 rounded-xl p-8 text-white text-center">
-          <h2 className="text-3xl font-bold mb-6">We&apos;re Here to Support You</h2>
-          <div className="grid md:grid-cols-2 gap-6">
-            <div className="bg-emerald-800/50 p-4 rounded-lg">
-              <p className="text-sm mb-1">24/7 Helpline</p>
-              <p className="text-2xl font-bold">0717 069 813</p>
+            <div>
+              <label htmlFor="email" className="block text-gray-700 mb-2">Your Email</label>
+              <input
+                type="email"
+                id="email"
+                className="w-full border border-gray-300 rounded-md p-2"
+              />
             </div>
-            <div className="bg-emerald-800/50 p-4 rounded-lg">
-              <p className="text-sm mb-1">SMS Support</p>
-              <p className="text-2xl font-bold">20351</p>
+
+            <div>
+              <label htmlFor="question" className="block text-gray-700 mb-2">Your question</label>
+              <textarea
+                id="question"
+                rows="6"
+                className="w-full border border-gray-300 rounded-md p-2"
+              ></textarea>
             </div>
-          </div>
+
+            <button
+              type="submit"
+              className="bg-green-600 text-white px-6 py-2 rounded-md hover:bg-green-700"
+            >
+              Ask us
+            </button>
+          </form>
         </div>
       </div>
     </div>
   );
 }
 
-export default GBVFacts; 
+export default GBVFacts;

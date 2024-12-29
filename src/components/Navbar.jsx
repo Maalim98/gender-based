@@ -142,8 +142,8 @@ const Navbar = () => {
               </div>
             </div>
 
-            <Link to="/services" onClick={handleLinkClick} className="text-gray-700 hover:text-blue-800 transition-colors font-medium">
-              Services
+            <Link to="/blogs" onClick={handleLinkClick} className="text-gray-700 hover:text-blue-800 transition-colors font-medium">
+              Blogs
             </Link>
 
             <Link to="/resources" onClick={handleLinkClick} className="text-gray-700 hover:text-blue-800 transition-colors font-medium">
@@ -166,6 +166,114 @@ const Navbar = () => {
           </div>
         </div>
       </nav>
+
+      {/* Mobile Navigation */}
+      {isOpen && (
+        <div className="md:hidden py-4">
+          {/* Container with right alignment */}
+          <div className="flex flex-col space-y-4 items-end px-4">
+            <div className="w-full flex flex-col items-end">
+              <Link 
+                to="/" 
+                onClick={handleLinkClick} 
+                className="text-gray-700 hover:text-blue-800 transition-colors"
+              >
+                Home
+              </Link>
+              <Link 
+                to="/get-help" 
+                onClick={handleLinkClick} 
+                className="text-gray-700 hover:text-blue-800 transition-colors"
+              >
+                Get Help
+              </Link>
+              
+              {/* Mobile Dropdown */}
+              <div className="flex flex-col items-end">
+                <button 
+                  onClick={() => setDropdownOpen(!dropdownOpen)}
+                  className="flex items-center gap-2 text-gray-700 hover:text-blue-800 transition-colors"
+                >
+                  <span>Who we are</span>
+                  <FaChevronDown 
+                    className={`transform transition-transform duration-200 ${dropdownOpen ? 'rotate-180' : ''}`} 
+                  />
+                </button>
+                
+                {dropdownOpen && (
+                  <div className="mt-2 flex flex-col items-end space-y-2">
+                    <Link 
+                      to="/who-we-are/about" 
+                      onClick={handleLinkClick} 
+                      className="text-gray-700 hover:text-blue-800"
+                    >
+                      About us
+                    </Link>
+                    <Link 
+                      to="/who-we-are/OurTeam" 
+                      onClick={handleLinkClick} 
+                      className="text-gray-700 hover:text-blue-800"
+                    >
+                      Our Team
+                    </Link>
+                    <Link 
+                      to="/who-we-are/board" 
+                      onClick={handleLinkClick} 
+                      className="text-gray-700 hover:text-blue-800"
+                    >
+                      Board of Trustees
+                    </Link>
+                    <Link 
+                      to="/who-we-are/locations" 
+                      onClick={handleLinkClick} 
+                      className="text-gray-700 hover:text-blue-800"
+                    >
+                      Where We Work
+                    </Link>
+                    <Link 
+                      to="/who-we-are/impact" 
+                      onClick={handleLinkClick} 
+                      className="text-gray-700 hover:text-blue-800"
+                    >
+                      Our Impact
+                    </Link>
+                  </div>
+                )}
+              </div>
+
+              <Link 
+                to="/blogs" 
+                onClick={handleLinkClick} 
+                className="text-gray-700 hover:text-blue-800 transition-colors"
+              >
+              Blogs
+              </Link>
+              <Link 
+                to="/resources" 
+                onClick={handleLinkClick} 
+                className="text-gray-700 hover:text-blue-800 transition-colors"
+              >
+                Resources
+              </Link>
+              <Link 
+                to="/contact" 
+                onClick={handleLinkClick} 
+                className="text-gray-700 hover:text-blue-800 transition-colors"
+              >
+                Contact
+              </Link>
+              
+              <Link 
+                to="/emergency" 
+                onClick={handleLinkClick}
+                className="bg-blue-800 text-white px-6 py-2 rounded-md hover:bg-blue-900 transition-colors mt-4"
+              >
+                Get Help Now
+              </Link>
+            </div>
+          </div>
+        </div>
+      )}
     </>
   );
 };

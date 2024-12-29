@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { FaHandHoldingHeart, FaUsers, FaLightbulb, FaBalanceScale } from 'react-icons/fa';
 import womanImage from '../../assets/images/xalimo.jpg'; // Ensure this path is correct
+import { Link } from 'react-router-dom';
 
 export const AboutUs = () => {
   const fadeIn = {
@@ -33,7 +34,7 @@ export const AboutUs = () => {
               Our Journey in Garissa
             </h1>
             <p className="text-xl md:text-2xl text-emerald-100 max-w-3xl mx-auto">
-              Supporting over 58,000 survivors since 2001
+              Supporting over 1000 survivors since 2014
             </p>
           </div>
         </motion.div>
@@ -48,7 +49,7 @@ export const AboutUs = () => {
           transition={{ delay: 0.3 }}
         >
           <p className="text-gray-600 leading-relaxed mb-6">
-            Since our establishment in Garissa in 2001, the Gender Violence Recovery Centre has been a beacon of hope 
+            Since our establishment in Garissa in 2014, the Gender-based Violence  Centre has been a beacon of hope 
             in Kenya's North Eastern region. Our center has played a pivotal role in shaping local and national 
             responses to Gender-Based Violence, particularly in adapting the Sexual Offenses Act 2006 to address 
             the unique challenges faced by the Garissa community.
@@ -90,7 +91,7 @@ export const AboutUs = () => {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl font-bold text-center mb-12">Our Impact in Numbers</h2>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
               {[
                 { number: "58,000+", label: "Survivors Supported" },
                 { number: "24/7", label: "Support Available" },
@@ -99,14 +100,14 @@ export const AboutUs = () => {
               ].map((stat, index) => (
                 <motion.div 
                   key={index}
-                  className="text-center"
+                  className="text-center p-4"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.1 }}
                   viewport={{ once: true }}
                 >
-                  <div className="text-5xl font-bold mb-2">{stat.number}</div>
-                  <div className="text-emerald-100">{stat.label}</div>
+                  <div className="text-4xl lg:text-5xl font-bold mb-2">{stat.number}</div>
+                  <div className="text-emerald-100 text-sm lg:text-base">{stat.label}</div>
                 </motion.div>
               ))}
             </div>
@@ -127,29 +128,64 @@ export const AboutUs = () => {
             <h2 className="text-3xl font-bold text-emerald-800 text-center mb-12">Key Initiatives</h2>
             <div className="grid md:grid-cols-2 gap-12">
               <div className="space-y-6">
-                <h3 className="text-xl font-semibold text-emerald-700">Community Mobilization</h3>
-                <p className="text-gray-600">
-                  Our "1 Million Fathers Movement" has gained significant traction in Garissa, engaging local religious 
-                  leaders and community elders in the fight against GBV, while respecting cultural values.
-                </p>
-                <h3 className="text-xl font-semibold text-emerald-700">Law Enforcement Partnership</h3>
-                <p className="text-gray-600">
-                  Working with the Garissa County Government, we've established a network of gender-friendly desks 
-                  across police stations in the region, with specially trained officers who handle cases with cultural 
-                  sensitivity.
-                </p>
+                <div className="group">
+                  <h3 className="text-xl font-semibold text-emerald-700">Community Mobilization</h3>
+                  <p className="text-gray-600">
+                    Our "1 Million Fathers Movement" has gained significant traction in Garissa, engaging local religious 
+                    leaders and community elders in the fight against GBV, while respecting cultural values.
+                  </p>
+                  <Link 
+                    to="/blogs/community-mobilization"
+                    className="inline-block mt-4 text-emerald-600 hover:text-emerald-700 font-medium group-hover:underline"
+                  >
+                    Read More →
+                  </Link>
+                </div>
+
+                <div className="group">
+                  <h3 className="text-xl font-semibold text-emerald-700">Law Enforcement Partnership</h3>
+                  <p className="text-gray-600">
+                    Working with the Garissa County Government, we've established a network of gender-friendly desks 
+                    across police stations in the region, with specially trained officers who handle cases with cultural 
+                    sensitivity.
+                  </p>
+                  <Link 
+                    to="/blogs/law-enforcement"
+                    className="inline-block mt-4 text-emerald-600 hover:text-emerald-700 font-medium group-hover:underline"
+                  >
+                    Read More →
+                  </Link>
+                </div>
               </div>
+
               <div className="space-y-6">
-                <h3 className="text-xl font-semibold text-emerald-700">Healthcare Integration</h3>
-                <p className="text-gray-600">
-                  We've pioneered the establishment of GBV Recovery Centres in Garissa's public health facilities, 
-                  ensuring accessible care for survivors in remote areas.
-                </p>
-                <h3 className="text-xl font-semibold text-emerald-700">Cultural Engagement</h3>
-                <p className="text-gray-600">
-                  Our partnership with local Islamic leaders and community elders has been instrumental in creating 
-                  sustainable change while respecting traditional values and religious teachings.
-                </p>
+                <div className="group">
+                  <h3 className="text-xl font-semibold text-emerald-700">Healthcare Integration</h3>
+                  <p className="text-gray-600">
+                    We've pioneered the establishment of GBV Recovery Centres in Garissa's public health facilities, 
+                    ensuring accessible care for survivors in remote areas.
+                  </p>
+                  <Link 
+                    to="/blogs/healthcare-integration"
+                    className="inline-block mt-4 text-emerald-600 hover:text-emerald-700 font-medium group-hover:underline"
+                  >
+                    Read More →
+                  </Link>
+                </div>
+
+                <div className="group">
+                  <h3 className="text-xl font-semibold text-emerald-700">Cultural Engagement</h3>
+                  <p className="text-gray-600">
+                    Our partnership with local Islamic leaders and community elders has been instrumental in creating 
+                    sustainable change while respecting traditional values and religious teachings.
+                  </p>
+                  <Link 
+                    to="/blogs/cultural-engagement"
+                    className="inline-block mt-4 text-emerald-600 hover:text-emerald-700 font-medium group-hover:underline"
+                  >
+                    Read More →
+                  </Link>
+                </div>
               </div>
             </div>
           </motion.div>

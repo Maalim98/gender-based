@@ -4,39 +4,35 @@ import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaFacebook, FaTwitter, FaInstagram
 
 const Footer = () => {
   return (
-    <footer className="relative bg-gradient-to-br from-emerald-900 via-emerald-800 to-emerald-900">
-      {/* Decorative Top Border */}
-      <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-emerald-400 via-teal-400 to-emerald-400"></div>
-
-      {/* Main Content */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-8">
-        {/* Emergency Contact Banner */}
-        <div className="mb-16">
-          <div className="bg-gradient-to-r from-emerald-600 to-teal-600 rounded-xl p-6 md:p-8 flex flex-col md:flex-row justify-between items-center shadow-lg">
-            <div>
-              <h3 className="text-2xl md:text-3xl font-bold text-white mb-2">24/7 Emergency Helpline</h3>
-              <p className="text-emerald-100">Immediate support available anytime, anywhere</p>
+    <footer className="bg-gray-900">
+      {/* Emergency Banner */}
+      <div className="bg-blue-800">
+        <div className="max-w-7xl mx-auto px-4 py-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+            <div className="text-center md:text-left">
+              <h3 className="text-xl md:text-2xl font-bold text-white">24/7 Emergency Helpline</h3>
+              <p className="text-blue-100 text-sm md:text-base">Immediate support available anytime</p>
             </div>
             <a 
               href="tel:+254717069813" 
-              className="mt-4 md:mt-0 bg-white text-emerald-600 px-8 py-3 rounded-full font-bold text-lg hover:bg-emerald-50 transition-colors flex items-center gap-2 shadow-md"
+              className="bg-white text-blue-800 px-6 py-2 rounded-md font-bold hover:bg-blue-50 transition-colors flex items-center gap-2"
             >
               <FaPhone className="animate-pulse" />
               0717 069 813
             </a>
           </div>
         </div>
+      </div>
 
-        {/* Footer Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+      {/* Main Footer */}
+      <div className="max-w-7xl mx-auto px-4 py-12 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           {/* About Section */}
           <div>
-            <img 
-              src="/path-to-your-logo-white.png" 
-              alt="GVRC Logo" 
-              className="h-16 w-auto mb-6"
-            />
-            <p className="text-emerald-100 leading-relaxed">
+            <div className="text-2xl font-bold text-white mb-4">
+              <span className="text-blue-500">GBV</span> Support
+            </div>
+            <p className="text-gray-400 text-sm leading-relaxed">
               Empowering communities and supporting survivors in Garissa County through compassion, 
               action, and lasting change.
             </p>
@@ -44,19 +40,19 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-white text-lg font-semibold mb-6">Quick Links</h4>
-            <ul className="space-y-4">
+            <h4 className="text-white font-semibold mb-4">Quick Links</h4>
+            <ul className="space-y-2">
               {[
                 { name: 'About Us', path: '/who-we-are/about' },
                 { name: 'Our Services', path: '/services' },
                 { name: 'Get Help', path: '/emergency' },
-                { name: 'News & Updates', path: '/news' },
+                { name: 'Resources', path: '/resources' },
                 { name: 'Contact', path: '/contact' }
               ].map((link) => (
                 <li key={link.name}>
                   <Link 
                     to={link.path}
-                    className="text-emerald-200 hover:text-white transition-colors inline-block"
+                    className="text-gray-400 hover:text-white transition-colors text-sm"
                   >
                     {link.name}
                   </Link>
@@ -67,13 +63,42 @@ const Footer = () => {
 
           {/* Contact Info */}
           <div>
-            <h4 className="text-white text-lg font-semibold mb-6">Contact Us</h4>
-            <ul className="space-y-4">
-              <li className="flex items-start gap-3 text-emerald-200">
+            <h4 className="text-white font-semibold mb-4">Contact Information</h4>
+            <ul className="space-y-3">
+              <li className="flex items-start gap-3 text-gray-400 text-sm">
                 <FaMapMarkerAlt className="mt-1 flex-shrink-0" />
                 <span>Garissa County, Kenya<br />P.O. Box 123-70100</span>
               </li>
+              <li className="flex items-center gap-3 text-gray-400 text-sm">
+                <FaEnvelope className="flex-shrink-0" />
+                <a href="mailto:info@gbvsupport.org" className="hover:text-white transition-colors">
+                  info@gbvsupport.org
+                </a>
+              </li>
             </ul>
+          </div>
+
+          {/* Social Links */}
+          <div>
+            <h4 className="text-white font-semibold mb-4">Follow Us</h4>
+            <div className="flex gap-4">
+              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                <FaFacebook size={20} />
+              </a>
+              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                <FaTwitter size={20} />
+              </a>
+              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                <FaInstagram size={20} />
+              </a>
+            </div>
+          </div>
+        </div>
+
+        {/* Bottom Bar */}
+        <div className="mt-12 pt-8 border-t border-gray-800">
+          <div className="text-center text-gray-400 text-sm">
+            <p>&copy; {new Date().getFullYear()} GBV Support. All rights reserved.</p>
           </div>
         </div>
       </div>

@@ -1,4 +1,4 @@
-import unWomen from '../assets/images/partners/un-women.png';
+import unWomen from '../assets/images/unwomen.png';
 import unicef from '../assets/images/partners/unicef.png';
 import who from '../assets/images/partners/who.png';
 import police from '../assets/images/partners/police.png';
@@ -24,10 +24,10 @@ const PartnersSection = () => {
             {partners.map((partner) => (
               <div 
                 key={partner.name}
-                className="flex items-center justify-center p-4 grayscale hover:grayscale-0 transition-all"
+                className="flex items-center justify-center p-4 grayscale hover:grayscale-0 transition-all duration-300 hover:scale-105"
               >
                 <img 
-                  src={partner.logo} 
+                  src={partner.logo}
                   alt={partner.name}
                   className="max-h-16 object-contain"
                 />

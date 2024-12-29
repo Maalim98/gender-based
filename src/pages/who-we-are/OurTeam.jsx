@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { FaLinkedin, FaTwitter, FaEnvelope } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 

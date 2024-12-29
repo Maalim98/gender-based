@@ -11,7 +11,7 @@ const FAQSection = () => {
     },
     {
       question: "What immediate support is available if I'm in danger?",
-      answer: "If you're in immediate danger: 1) Call our 24/7 emergency hotline at 0717 069 813 2) Contact police at 999 3) If possible, get to a safe location like a friend's house or our shelter 4) We can arrange emergency transportation if needed. Your safety is our absolute priority."
+      answer: "If you're in immediate danger:\n• Call our 24/7 emergency hotline at 0717 069 813\n• Contact police at 999\n• If possible, get to a safe location like a friend's house or our shelter\n• We can arrange emergency transportation if needed\n\nYour safety is our absolute priority."
     },
     {
       question: "Will my information be kept confidential?",
@@ -19,11 +19,11 @@ const FAQSection = () => {
     },
     {
       question: "What support services do you provide?",
-      answer: "We offer comprehensive support including: 1) Emergency shelter 2) Medical care and referrals 3) Legal aid and court accompaniment 4) Individual and group counseling 5) Economic empowerment programs 6) Child support services 7) Safety planning 8) Community reintegration support. All services are free of charge."
+      answer: "We offer comprehensive support including:\n• Emergency shelter\n• Medical care and referrals\n• Legal aid and court accompaniment\n• Individual and group counseling\n• Economic empowerment programs\n• Child support services\n• Safety planning\n• Community reintegration support\n\nAll services are free of charge."
     },
     {
       question: "How can I help someone I know who is experiencing GBV?",
-      answer: "To support someone: 1) Listen without judgment 2) Believe them 3) Don't pressure them to take immediate action 4) Share information about our services 5) Help them create a safety plan 6) Respect their decisions 7) Keep their situation confidential. You can also contact our helpline for guidance on how to best support them."
+      answer: "To support someone:\n• Listen without judgment\n• Believe them\n• Don't pressure them to take immediate action\n• Share information about our services\n• Help them create a safety plan\n• Respect their decisions\n• Keep their situation confidential\n\nYou can also contact our helpline for guidance on how to best support them."
     },
     {
       question: "Do you provide services in different languages?",
@@ -31,7 +31,7 @@ const FAQSection = () => {
     },
     {
       question: "What should I bring if I need to leave my home quickly?",
-      answer: "If possible, prepare an emergency bag with: 1) Important documents (ID, birth certificates, medical cards) 2) Essential medicines 3) Some money 4) Change of clothes 5) Children's essential items 6) Phone and charger 7) Important phone numbers. However, if you're in immediate danger, leave immediately - your safety comes first."
+      answer: "If possible, prepare an emergency bag with:\n• Important documents (ID, birth certificates, medical cards)\n• Essential medicines\n• Some money\n• Change of clothes\n• Children's essential items\n• Phone and charger\n• Important phone numbers\n\nHowever, if you're in immediate danger, leave immediately - your safety comes first."
     }
   ];
 
@@ -170,7 +170,7 @@ const FAQItem = ({ question, answer }) => {
         }}
       >
         <div className="px-6 py-4 border-t border-emerald-100 bg-emerald-50/30">
-          <p className="text-gray-600 leading-relaxed">{answer}</p>
+          <p className="text-gray-600 leading-relaxed whitespace-pre-line">{answer}</p>
         </div>
       </motion.div>
     </div>

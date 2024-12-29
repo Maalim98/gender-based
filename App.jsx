@@ -21,8 +21,6 @@ import HealthcareIntegration from './pages/blogs/HealthcareIntegration';
 import CulturalEngagement from './pages/blogs/CulturalEngagement';
 import NetworkPage from './pages/news/NetworkPage';
 
-
-
 function App() {
   return (
     <BrowserRouter>
@@ -34,7 +32,6 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/who-we-are/about" element={<AboutUs />} />
             <Route path="/who-we-are/team" element={<OurTeam />} />
-            <Route path="/who-we-are/OurTeam" element={<OurTeam />} />
             <Route path="/who-we-are/board" element={<BoardOfTrustees />} />
             <Route path="/who-we-are/locations" element={<WhereWeWork />} />
             <Route path="/who-we-are/impact" element={<OurImpact />} />
