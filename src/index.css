@@ -1,3 +1,22 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+    color-scheme: light !important;
+  }
+  
+  /* Force white background and dark text */
+  html, 
+  body {
+    background-color: white !important;
+    color: black !important;
+  }
+  
+  /* Override dark mode */
+  @media (prefers-color-scheme: dark) {
+    html, body {
+      background-color: white !important;
+      color: black !important;
+    }
+  }

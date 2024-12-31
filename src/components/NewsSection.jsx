@@ -5,7 +5,7 @@ import { mobileClasses } from '../styles/responsive';
 import ResponsiveContainer from './layout/ResponsiveContainer';
 
 import supportCenter from "../assets/images/support center.jpg"
-import awareness from "../assets/images/awareness.jpg"
+import awareness from "../assets/images/awareness2.jpg"
 import meeting from "../assets/images/meeting.jpg"
 
 const NewsSection = () => {

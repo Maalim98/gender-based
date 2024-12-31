@@ -9,18 +9,18 @@ const IntroSection = () => {
         visible: {
             opacity: 1,
             transition: {
-                staggerChildren: 0.5
+                staggerChildren: 0.1
             }
         }
     };
 
     const itemVariants = {
-        hidden: { opacity: 0, y: 50 },
+        hidden: { opacity: 0, y: 20 },
         visible: {
             opacity: 1,
             y: 0,
             transition: {
-                duration: 1.2,
+                duration: 0.3,
                 ease: "easeOut"
             }
         }
@@ -31,10 +31,10 @@ const IntroSection = () => {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <motion.div 
                     className="mb-12 md:mb-16 text-center"
-                    initial={{ opacity: 0, y: 30 }}
+                    initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ margin: "-100px" }}
-                    transition={{ duration: 1, delay: 0.5 }}
+                    transition={{ duration: 0.3 }}
                 >
                     <div className="inline-block">
                         <h2 className="text-3xl md:text-4xl font-bold text-emerald-800 relative">
