@@ -1,4 +1,3 @@
-
 import { FaLinkedin, FaTwitter, FaEnvelope } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 
@@ -17,22 +16,40 @@ const OurTeam = () => {
                     name: "Dr. Amina Hassan",
                     role: "Executive Director",
                     image: training1,
-                    bio: "Leading our mission with 15 years of experience in GBV prevention.",
-                    expertise: "Crisis Management & Policy Development"
+                    bio: "Leading our mission with 15 years of experience in GBV prevention. Dr. Hassan has pioneered several community outreach programs.",
+                    expertise: "Crisis Management & Policy Development",
+                    experience: [
+                        "15+ years in GBV prevention and advocacy",
+                        "PhD in Social Work from University of Nairobi",
+                        "Led implementation of 3 major community programs"
+                    ],
+                    achievements: "Recipient of the 2022 Community Leadership Award"
                 },
                 {
                     name: "Fatuma Omar",
                     role: "Deputy Director",
                     image: training2,
-                    bio: "Overseeing program implementation and strategic partnerships.",
-                    expertise: "Program Management & Strategy"
+                    bio: "Overseeing program implementation and strategic partnerships with over a decade of experience in community development.",
+                    expertise: "Program Management & Strategy",
+                    experience: [
+                        "12 years in community development",
+                        "Masters in Public Health",
+                        "Former UN Women Program Coordinator"
+                    ],
+                    achievements: "Successfully managed projects worth over $2M"
                 },
                 {
                     name: "Ahmed Ibrahim",
                     role: "Operations Director",
                     image: training3,
-                    bio: "Managing day-to-day operations and resource allocation.",
-                    expertise: "Operations & Resource Management"
+                    bio: "Managing day-to-day operations with expertise in resource allocation and team management.",
+                    expertise: "Operations & Resource Management",
+                    experience: [
+                        "10 years in operations management",
+                        "MBA from Strathmore University",
+                        "Certified Project Management Professional"
+                    ],
+                    achievements: "Improved operational efficiency by 40%"
                 }
             ]
         },
@@ -43,22 +60,40 @@ const OurTeam = () => {
                     name: "Dr. Fatuma Ibrahim",
                     role: "Clinical Psychologist",
                     image: training4,
-                    bio: "Specializing in trauma therapy and PTSD treatment.",
-                    expertise: "Trauma Therapy & PTSD Treatment"
+                    bio: "Specializing in trauma therapy with extensive experience in PTSD treatment and crisis intervention.",
+                    expertise: "Trauma Therapy & PTSD Treatment",
+                    experience: [
+                        "PhD in Clinical Psychology",
+                        "8 years specializing in trauma therapy",
+                        "Certified EMDR practitioner"
+                    ],
+                    achievements: "Developed innovative trauma therapy program reaching 500+ survivors"
                 },
                 {
                     name: "Halima Abdi",
                     role: "Senior Counselor",
                     image: training1,
-                    bio: "Certified trauma counselor for youth support services.",
-                    expertise: "Youth Counseling & Group Therapy"
+                    bio: "Certified trauma counselor specializing in youth support services.",
+                    expertise: "Youth Counseling & Group Therapy",
+                    experience: [
+                        "10 years counseling experience",
+                        "Masters in Clinical Psychology",
+                        "Specialized in youth trauma"
+                    ],
+                    achievements: "Established youth support program serving 200+ annually"
                 },
                 {
                     name: "Maryam Hussein",
                     role: "Family Counselor",
                     image: training2,
                     bio: "Specialized in family therapy and relationship counseling.",
-                    expertise: "Family Therapy & Counseling"
+                    expertise: "Family Therapy & Counseling",
+                    experience: [
+                        "7 years in family counseling",
+                        "Advanced certification in family therapy",
+                        "Group therapy specialist"
+                    ],
+                    achievements: "Successfully facilitated 100+ family reconciliations"
                 }
             ]
         },
@@ -70,21 +105,39 @@ const OurTeam = () => {
                     role: "Senior Legal Coordinator",
                     image: training3,
                     bio: "Human rights lawyer with 10 years experience in GBV cases.",
-                    expertise: "Legal Aid & Rights Advocacy"
+                    expertise: "Legal Aid & Rights Advocacy",
+                    experience: [
+                        "10 years in human rights law",
+                        "LLM in Human Rights Law",
+                        "Certified mediator"
+                    ],
+                    achievements: "Won landmark cases protecting survivors' rights"
                 },
                 {
                     name: "Advocate Hassan Ali",
                     role: "Legal Officer",
                     image: training4,
                     bio: "Specializing in family law and protection orders.",
-                    expertise: "Family Law & Protection Orders"
+                    expertise: "Family Law & Protection Orders",
+                    experience: [
+                        "8 years legal practice",
+                        "Specialized in family law",
+                        "Protection order expert"
+                    ],
+                    achievements: "Secured protection orders for 300+ survivors"
                 },
                 {
                     name: "Advocate Amina Yusuf",
                     role: "Legal Counsel",
                     image: training1,
                     bio: "Expert in criminal law and GBV case prosecution.",
-                    expertise: "Criminal Law & Prosecution"
+                    expertise: "Criminal Law & Prosecution",
+                    experience: [
+                        "6 years in criminal law",
+                        "Former state prosecutor",
+                        "GBV case specialist"
+                    ],
+                    achievements: "90% success rate in GBV case prosecution"
                 }
             ]
         },
@@ -96,21 +149,39 @@ const OurTeam = () => {
                     role: "Outreach Director",
                     image: training2,
                     bio: "Leading community engagement and awareness programs.",
-                    expertise: "Community Engagement & Education"
+                    expertise: "Community Engagement & Education",
+                    experience: [
+                        "12 years in community work",
+                        "Masters in Community Development",
+                        "Program design specialist"
+                    ],
+                    achievements: "Reached 50,000+ community members through awareness programs"
                 },
                 {
                     name: "Khadija Ali",
                     role: "Community Mobilizer",
                     image: training3,
                     bio: "Working with communities on GBV prevention.",
-                    expertise: "Community Mobilization & Training"
+                    expertise: "Community Mobilization & Training",
+                    experience: [
+                        "8 years field experience",
+                        "Community health specialist",
+                        "Training program developer"
+                    ],
+                    achievements: "Trained 1000+ community advocates"
                 },
                 {
                     name: "Ibrahim Hassan",
                     role: "Youth Coordinator",
                     image: training4,
                     bio: "Coordinating youth programs and school outreach.",
-                    expertise: "Youth Programs & Education"
+                    expertise: "Youth Programs & Education",
+                    experience: [
+                        "5 years in youth work",
+                        "Education specialist",
+                        "Program coordinator"
+                    ],
+                    achievements: "Established programs in 30+ schools"
                 }
             ]
         },
@@ -122,21 +193,39 @@ const OurTeam = () => {
                     role: "Medical Director",
                     image: training1,
                     bio: "Overseeing medical services and health programs.",
-                    expertise: "Medical Care & Health Services"
+                    expertise: "Medical Care & Health Services",
+                    experience: [
+                        "15 years medical practice",
+                        "Emergency medicine specialist",
+                        "Healthcare program director"
+                    ],
+                    achievements: "Established 24/7 medical response protocol"
                 },
                 {
                     name: "Nurse Asha Ali",
                     role: "Senior Nurse",
                     image: training2,
                     bio: "Providing direct medical care to survivors.",
-                    expertise: "Emergency Care & Support"
+                    expertise: "Emergency Care & Support",
+                    experience: [
+                        "10 years nursing experience",
+                        "Trauma care specialist",
+                        "Emergency response coordinator"
+                    ],
+                    achievements: "Trained 50+ medical staff in trauma response"
                 },
                 {
                     name: "Dr. Hassan Abdi",
                     role: "Health Coordinator",
                     image: training3,
                     bio: "Coordinating with healthcare partners and facilities.",
-                    expertise: "Healthcare Coordination"
+                    expertise: "Healthcare Coordination",
+                    experience: [
+                        "8 years in healthcare management",
+                        "Public health specialist",
+                        "Partnership coordinator"
+                    ],
+                    achievements: "Established partnerships with 15 healthcare facilities"
                 }
             ]
         }

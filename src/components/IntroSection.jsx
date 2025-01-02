@@ -98,7 +98,7 @@ const IntroSection = () => {
                                 <div className="bg-white/50 backdrop-blur-sm rounded-xl p-6 shadow-lg transform hover:-translate-y-1 transition-all duration-300">
                                     <div className="flex items-center justify-between mb-4">
                                         <h3 className="text-xl font-semibold text-emerald-800">Our Reach</h3>
-                                        <span className="text-3xl font-bold text-emerald-600">58K+</span>
+                                        <span className="text-3xl font-bold text-emerald-600">300+</span>
                                     </div>
                                     <div className="flex flex-wrap gap-2">
                                         {[
@@ -168,7 +168,7 @@ const IntroSection = () => {
                             <div className="space-y-6">
                                 <motion.div variants={itemVariants} className="flex items-center gap-4 mb-8">
                                     <div className="bg-emerald-100 p-4 rounded-full">
-                                        <span className="text-3xl text-emerald-600 font-bold">58K+</span>
+                                        <span className="text-3xl text-emerald-600 font-bold">300+</span>
                                     </div>
                                     <p className="text-gray-700 text-lg">Survivors supported across Garissa County</p>
                                 </motion.div>

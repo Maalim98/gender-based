@@ -7,7 +7,7 @@ import AboutUs from './pages/who-we-are/AboutUs';
 import OurTeam from './pages/who-we-are/OurTeam';
 import BoardOfTrustees from './pages/who-we-are/BoardOfTrustees';
 import WhereWeWork from './pages/who-we-are/WhereWeWork';
-import OurImpact from './pages/who-we-are/OurImpact';
+import OurAchievements from './pages/who-we-are/OurAchievements';
 import EmergencySection from './pages/EmergencySection';
 import GBVFacts from './pages/GBVFacts';
 import CommunityOutreach from './pages/news/CommunityOutreach';
@@ -20,7 +20,7 @@ import CommunityMobilization from './pages/blogs/CommunityMobilization';
 import HealthcareIntegration from './pages/blogs/HealthcareIntegration';
 import CulturalEngagement from './pages/blogs/CulturalEngagement';
 import NetworkPage from './pages/news/NetworkPage';
-
+import Contact from './pages/Contact';
 
 
 function App() {
@@ -37,7 +37,7 @@ function App() {
             <Route path="/who-we-are/OurTeam" element={<OurTeam />} />
             <Route path="/who-we-are/board" element={<BoardOfTrustees />} />
             <Route path="/who-we-are/locations" element={<WhereWeWork />} />
-            <Route path="/who-we-are/impact" element={<OurImpact />} />
+            <Route path="/who-we-are/achievements" element={<OurAchievements />} />
             <Route path="/emergency" element={<EmergencySection />} />
             <Route path="/gbv-facts" element={<GBVFacts />} />
             <Route path="/news/community-outreach" element={<CommunityOutreach />} />
@@ -45,6 +45,7 @@ function App() {
             <Route path="/news/empowerment" element={<Empowerment />} />
             <Route path="/news/network" element={<NetworkPage />} />
             <Route path="/get-support" element={<GetSupport />} />
+            <Route path="/contact" element={<Contact />} />
             
             <Route path="/blogs">
               <Route path="law-enforcement" element={<LawEnforcement />} />

@@ -133,11 +133,11 @@ const Navbar = () => {
                   Where We Work
                 </Link>
                 <Link
-                  to="/who-we-are/impact"
+                  to="/who-we-are/achievements"
                   className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-800 transition-colors"
                   onClick={handleLinkClick}
                 >
-                  Our Impact
+                  Our Achievements
                 </Link>
               </div>
             </div>
