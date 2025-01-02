@@ -1,11 +1,12 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { FaBars, FaTimes, FaPhone, FaChevronDown } from 'react-icons/fa';
+import { FaBars, FaTimes, FaPhone, FaChevronDown, FaSearch, FaClipboard, FaUser, FaLock, FaDonate } from 'react-icons/fa';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [timeoutId, setTimeoutId] = useState(null);
+  const [searchOpen, setSearchOpen] = useState(false);
 
   const handleLinkClick = () => {
     setDropdownOpen(false);
@@ -152,6 +153,46 @@ const Navbar = () => {
 
             <Link to="/contact" onClick={handleLinkClick} className="text-gray-700 hover:text-blue-800 transition-colors font-medium">
               Contact
+            </Link>
+
+            {/* Search */}
+            <div className="relative">
+              <button
+                onClick={() => setSearchOpen(!searchOpen)}
+                className="p-2 hover:bg-gray-100 rounded-full"
+              >
+                <FaSearch className="text-gray-600" />
+              </button>
+              {searchOpen && (
+                <div className="absolute right-0 mt-2 w-64 bg-white rounded shadow-lg p-2 z-50">
+                  <input
+                    type="text"
+                    placeholder="Search..."
+                    className="w-full px-3 py-2 border rounded"
+                  />
+                </div>
+              )}
+            </div>
+
+            {/* New Action Links */}
+            <Link to="/report-case" onClick={handleLinkClick} className="text-red-600 hover:text-red-700 transition-colors font-medium">
+              <FaClipboard className="inline mr-1" />
+              Report Case
+            </Link>
+
+            <Link to="/victim-login" onClick={handleLinkClick} className="text-gray-700 hover:text-blue-800 transition-colors font-medium">
+              <FaUser className="inline mr-1" />
+              Victim Login
+            </Link>
+
+            <Link to="/admin" onClick={handleLinkClick} className="text-gray-700 hover:text-blue-800 transition-colors font-medium">
+              <FaLock className="inline mr-1" />
+              Admin
+            </Link>
+
+            <Link to="/donate" onClick={handleLinkClick} className="text-green-600 hover:text-green-700 transition-colors font-medium">
+              <FaDonate className="inline mr-1" />
+              Donate
             </Link>
 
             {/* Emergency Button */}
