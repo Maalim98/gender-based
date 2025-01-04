@@ -1,33 +1,26 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { FaBars, FaTimes, FaPhone, FaChevronDown } from 'react-icons/fa';
+import { FaPhone, FaChevronDown, FaUser, FaDonate, FaLock, FaBars, FaTimes } from 'react-icons/fa';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [dropdownOpen, setDropdownOpen] = useState(false);
-  const [timeoutId, setTimeoutId] = useState(null);
+  const [whoWeAreOpen, setWhoWeAreOpen] = useState(false);
+  const [dashboardOpen, setDashboardOpen] = useState(false);
 
   const handleLinkClick = () => {
-    setDropdownOpen(false);
     setIsOpen(false);
+    setWhoWeAreOpen(false);
+    setDashboardOpen(false);
   };
 
-  const handleDropdownHover = (isHovering) => {
-    if (!isOpen) {
-      if (timeoutId) {
-        clearTimeout(timeoutId);
-        setTimeoutId(null);
-      }
+  const toggleWhoWeAre = () => {
+    setWhoWeAreOpen(!whoWeAreOpen);
+    setDashboardOpen(false);
+  };
 
-      if (!isHovering) {
-        const id = setTimeout(() => {
-          setDropdownOpen(false);
-        }, 200);
-        setTimeoutId(id);
-      } else {
-        setDropdownOpen(true);
-      }
-    }
+  const toggleDashboard = () => {
+    setDashboardOpen(!dashboardOpen);
+    setWhoWeAreOpen(false);
   };
 
   return (
@@ -80,66 +73,54 @@ const Navbar = () => {
             </Link>
 
             {/* About Us Dropdown */}
-            <div 
-              className="relative group"
-              onMouseEnter={() => handleDropdownHover(true)}
-              onMouseLeave={() => handleDropdownHover(false)}
-            >
-              <button
+            <div className="relative group">
+              <button 
+                onClick={toggleWhoWeAre}
                 className="flex items-center space-x-1 text-gray-700 hover:text-blue-800 transition-colors font-medium"
-                onClick={() => setDropdownOpen(!dropdownOpen)}
               >
                 <span>Who we are</span>
-                <FaChevronDown className={`transform transition-transform duration-200 ${dropdownOpen ? 'rotate-180' : ''}`} />
+                <FaChevronDown className={`transform transition-transform duration-200 ${whoWeAreOpen ? 'rotate-180' : ''}`} />
               </button>
 
-              {/* Dropdown Menu */}
-              <div
-                className={`
-                  absolute left-0 mt-2 w-48
-                  bg-white rounded-md shadow-lg py-1
-                  z-50
-                  transform
-                  transition-all duration-300 ease-in-out
-                  ${dropdownOpen ? 'opacity-100 visible' : 'opacity-0 invisible'}
-                `}
-              >
-                <Link
-                  to="/who-we-are/about"
-                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-800 transition-colors"
-                  onClick={handleLinkClick}
-                >
-                  About us
-                </Link>
-                <Link
-                  to="/who-we-are/OurTeam"
-                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-800 transition-colors"
-                  onClick={handleLinkClick}
-                >
-                  Our Team
-                </Link>
-                <Link
-                  to="/who-we-are/board"
-                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-800 transition-colors"
-                  onClick={handleLinkClick}
-                >
-                  Board of Trustees
-                </Link>
-                <Link
-                  to="/who-we-are/locations"
-                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-800 transition-colors"
-                  onClick={handleLinkClick}
-                >
-                  Where We Work
-                </Link>
-                <Link
-                  to="/who-we-are/achievements"
-                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-800 transition-colors"
-                  onClick={handleLinkClick}
-                >
-                  Our Achievements
-                </Link>
-              </div>
+              {whoWeAreOpen && (
+                <div className="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-50">
+                  <Link
+                    to="/who-we-are/about"
+                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-800 transition-colors"
+                    onClick={handleLinkClick}
+                  >
+                    About us
+                  </Link>
+                  <Link
+                    to="/who-we-are/OurTeam"
+                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-800 transition-colors"
+                    onClick={handleLinkClick}
+                  >
+                    Our Team
+                  </Link>
+                  <Link
+                    to="/who-we-are/board"
+                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-800 transition-colors"
+                    onClick={handleLinkClick}
+                  >
+                    Board of Trustees
+                  </Link>
+                  <Link
+                    to="/who-we-are/locations"
+                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-800 transition-colors"
+                    onClick={handleLinkClick}
+                  >
+                    Where We Work
+                  </Link>
+                  <Link
+                    to="/who-we-are/achievements"
+                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-800 transition-colors"
+                    onClick={handleLinkClick}
+                  >
+                    Our Achievements
+                  </Link>
+                </div>
+              )}
             </div>
 
             <Link to="/blogs" onClick={handleLinkClick} className="text-gray-700 hover:text-blue-800 transition-colors font-medium">
@@ -154,123 +135,145 @@ const Navbar = () => {
               Contact
             </Link>
 
-            {/* Emergency Button */}
-            <Link 
-              to="/emergency"
-              onClick={handleLinkClick}
-              className="bg-blue-800 text-white px-6 py-2.5 rounded-md hover:bg-blue-900 transition-colors flex items-center gap-2 font-medium"
-            >
-              <FaPhone />
-              Get Help Now
-            </Link>
+            {/* Dashboard Dropdown */}
+            <div className="relative group">
+              <button 
+                onClick={toggleDashboard}
+                className="flex items-center space-x-1 text-gray-700 hover:text-blue-800 transition-colors font-medium"
+              >
+                <FaUser className="mr-1" />
+                <span>Dashboard</span>
+                <FaChevronDown className={`transform transition-transform duration-200 ${dashboardOpen ? 'rotate-180' : ''}`} />
+              </button>
+
+              {dashboardOpen && (
+                <div className="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-50">
+                  <Link 
+                    to="/victim-dashboard" 
+                    onClick={handleLinkClick}
+                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-800"
+                  >
+                    <FaUser className="inline mr-2" />
+                    Victim Dashboard
+                  </Link>
+                  <Link 
+                    to="/admin" 
+                    onClick={handleLinkClick}
+                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-800"
+                  >
+                    <FaLock className="inline mr-2" />
+                    Admin
+                  </Link>
+                  <Link 
+                    to="/donate" 
+                    onClick={handleLinkClick}
+                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-800"
+                  >
+                    <FaDonate className="inline mr-2" />
+                    Donate
+                  </Link>
+                </div>
+              )}
+            </div>
           </div>
         </div>
       </nav>
 
-      {/* Mobile Navigation */}
+      {/* Mobile Menu */}
       {isOpen && (
         <div className="md:hidden py-4">
-          {/* Container with right alignment */}
-          <div className="flex flex-col space-y-4 items-end px-4">
-            <div className="w-full flex flex-col items-end">
-              <Link 
-                to="/" 
-                onClick={handleLinkClick} 
-                className="text-gray-700 hover:text-blue-800 transition-colors"
-              >
-                Home
-              </Link>
-              <Link 
-                to="/get-help" 
-                onClick={handleLinkClick} 
-                className="text-gray-700 hover:text-blue-800 transition-colors"
-              >
-                Get Help
-              </Link>
-              
-              {/* Mobile Dropdown */}
-              <div className="flex flex-col items-end">
-                <button 
-                  onClick={() => setDropdownOpen(!dropdownOpen)}
-                  className="flex items-center gap-2 text-gray-700 hover:text-blue-800 transition-colors"
-                >
-                  <span>Who we are</span>
-                  <FaChevronDown 
-                    className={`transform transition-transform duration-200 ${dropdownOpen ? 'rotate-180' : ''}`} 
-                  />
-                </button>
-                
-                {dropdownOpen && (
-                  <div className="mt-2 flex flex-col items-end space-y-2">
-                    <Link 
-                      to="/who-we-are/about" 
-                      onClick={handleLinkClick} 
-                      className="text-gray-700 hover:text-blue-800"
-                    >
-                      About us
-                    </Link>
-                    <Link 
-                      to="/who-we-are/OurTeam" 
-                      onClick={handleLinkClick} 
-                      className="text-gray-700 hover:text-blue-800"
-                    >
-                      Our Team
-                    </Link>
-                    <Link 
-                      to="/who-we-are/board" 
-                      onClick={handleLinkClick} 
-                      className="text-gray-700 hover:text-blue-800"
-                    >
-                      Board of Trustees
-                    </Link>
-                    <Link 
-                      to="/who-we-are/locations" 
-                      onClick={handleLinkClick} 
-                      className="text-gray-700 hover:text-blue-800"
-                    >
-                      Where We Work
-                    </Link>
-                    <Link 
-                      to="/who-we-are/impact" 
-                      onClick={handleLinkClick} 
-                      className="text-gray-700 hover:text-blue-800"
-                    >
-                      Our Impact
-                    </Link>
-                  </div>
-                )}
-              </div>
+          {/* Who We Are Mobile Dropdown */}
+          <div>
+            <button 
+              onClick={toggleWhoWeAre}
+              className="flex items-center justify-between w-full text-gray-700 hover:text-blue-800"
+            >
+              <span>Who we are</span>
+              <FaChevronDown className={`transform transition-transform duration-200 ${whoWeAreOpen ? 'rotate-180' : ''}`} />
+            </button>
 
-              <Link 
-                to="/blogs" 
-                onClick={handleLinkClick} 
-                className="text-gray-700 hover:text-blue-800 transition-colors"
-              >
-              Blogs
-              </Link>
-              <Link 
-                to="/resources" 
-                onClick={handleLinkClick} 
-                className="text-gray-700 hover:text-blue-800 transition-colors"
-              >
-                Resources
-              </Link>
-              <Link 
-                to="/contact" 
-                onClick={handleLinkClick} 
-                className="text-gray-700 hover:text-blue-800 transition-colors"
-              >
-                Contact
-              </Link>
-              
-              <Link 
-                to="/emergency" 
-                onClick={handleLinkClick}
-                className="bg-blue-800 text-white px-6 py-2 rounded-md hover:bg-blue-900 transition-colors mt-4"
-              >
-                Get Help Now
-              </Link>
-            </div>
+            {whoWeAreOpen && (
+              <div className="pl-4 mt-2 space-y-2">
+                <Link 
+                  to="/who-we-are/about" 
+                  onClick={handleLinkClick} 
+                  className="text-gray-700 hover:text-blue-800"
+                >
+                  About us
+                </Link>
+                <Link 
+                  to="/who-we-are/OurTeam" 
+                  onClick={handleLinkClick} 
+                  className="text-gray-700 hover:text-blue-800"
+                >
+                  Our Team
+                </Link>
+                <Link 
+                  to="/who-we-are/board" 
+                  onClick={handleLinkClick} 
+                  className="text-gray-700 hover:text-blue-800"
+                >
+                  Board of Trustees
+                </Link>
+                <Link 
+                  to="/who-we-are/locations" 
+                  onClick={handleLinkClick} 
+                  className="text-gray-700 hover:text-blue-800"
+                >
+                  Where We Work
+                </Link>
+                <Link 
+                  to="/who-we-are/impact" 
+                  onClick={handleLinkClick} 
+                  className="text-gray-700 hover:text-blue-800"
+                >
+                  Our Impact
+                </Link>
+              </div>
+            )}
+          </div>
+
+          {/* Dashboard Mobile Dropdown */}
+          <div>
+            <button 
+              onClick={toggleDashboard}
+              className="flex items-center justify-between w-full text-gray-700 hover:text-blue-800"
+            >
+              <div className="flex items-center">
+                <FaUser className="mr-2" />
+                <span>Dashboard</span>
+              </div>
+              <FaChevronDown className={`transform transition-transform duration-200 ${dashboardOpen ? 'rotate-180' : ''}`} />
+            </button>
+
+            {dashboardOpen && (
+              <div className="pl-4 mt-2 space-y-2">
+                <Link 
+                  to="/victim-dashboard" 
+                  onClick={handleLinkClick}
+                  className="flex items-center text-gray-700 hover:text-blue-800"
+                >
+                  <FaUser className="mr-2" />
+                  <span>Victim Dashboard</span>
+                </Link>
+                <Link 
+                  to="/admin" 
+                  onClick={handleLinkClick}
+                  className="flex items-center text-gray-700 hover:text-blue-800"
+                >
+                  <FaLock className="mr-2" />
+                  <span>Admin</span>
+                </Link>
+                <Link 
+                  to="/donate" 
+                  onClick={handleLinkClick}
+                  className="flex items-center text-gray-700 hover:text-blue-800"
+                >
+                  <FaDonate className="mr-2" />
+                  <span>Donate</span>
+                </Link>
+              </div>
+            )}
           </div>
         </div>
       )}
