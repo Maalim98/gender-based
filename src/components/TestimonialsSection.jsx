@@ -5,37 +5,37 @@ const TestimonialsSection = () => {
   const testimonials = [
     {
       quote: "The support I received helped me rebuild my life. I am now stronger and helping others in my community. The programs and counseling services made a real difference in my journey to recovery.",
-      author: "Sarah M.",
+      author: "Sarah Ali.",
       role: "Community Leader",
       location: "Garissa Town"
     },
     {
       quote: "Thanks to the economic empowerment program, I was able to start my own business. Now I can support my family and inspire other women to become financially independent.",
-      author: "Amina H.",
+      author: "Fouzia Yarrow.",
       role: "Small Business Owner",
       location: "Dadaab"
     },
     {
       quote: "The youth mentorship program changed my perspective on life. I learned valuable skills and found a supportive community that believes in my potential.",
-      author: "Mohamed A.",
+      author: "Mohamed Hassan.",
       role: "Youth Advocate",
       location: "Balambala"
     },
     {
       quote: "As a partner organization, we've seen firsthand the incredible impact of their community-based approach. Together, we're reaching more people and creating lasting change.",
-      author: "Dr. Fatuma N.",
+      author: "Dr. Fatuma Noor.",
       role: "NGO Director",
       location: "Garissa County"
     },
     {
       quote: "The mobile outreach services have been a lifeline for our remote village. We now have access to essential support and resources we never had before.",
-      author: "Halima W.",
+      author: "Najma Aden.",
       role: "Village Elder",
       location: "Fafi"
     },
     {
       quote: "Being part of the support group helped me find my voice again. The solidarity and understanding I found here gave me strength to move forward.",
-      author: "Zainab K.",
+      author: "Zainab Khalif.",
       role: "Support Group Member",
       location: "Ijara"
     }

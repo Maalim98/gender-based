@@ -272,6 +272,7 @@ const Navbar = () => {
                   <FaDonate className="mr-2" />
                   <span>Donate</span>
                 </Link>
+                
               </div>
             )}
           </div>
