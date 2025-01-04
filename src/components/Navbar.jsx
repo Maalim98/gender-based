@@ -1,9 +1,15 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { FaPhone, FaChevronDown, FaUser, FaDonate, FaLock, FaBars, FaTimes } from 'react-icons/fa';
+import { FaPhone, FaChevronDown, FaBars, FaTimes, FaUserShield, FaUserCog, FaHeart } from 'react-icons/fa';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [whoWeAreOpen, setWhoWeAreOpen] = useState(false);
+
+  const handleLinkClick = () => {
+    setWhoWeAreOpen(false); // Close "Who We Are" dropdown
+    setIsOpen(false); // Close mobile menu
+  };
 
   return (
     <>
@@ -29,7 +35,7 @@ const Navbar = () => {
             </Link>
 
             {/* Mobile Menu Button */}
-            <button 
+            <button
               className="md:hidden text-gray-700 p-2 z-50"
               onClick={() => setIsOpen(!isOpen)}
             >
@@ -41,47 +47,57 @@ const Navbar = () => {
               <Link to="/" className="text-gray-700 hover:text-blue-800 transition-colors font-medium">
                 Home
               </Link>
-              
-              <Link to="/get-help" className="text-gray-700 hover:text-blue-800 transition-colors font-medium">
-                Get Help
-              </Link>
 
-              {/* About Us Dropdown */}
+              {/* Who We Are Dropdown */}
               <div className="relative group">
-                <button 
+                <button
                   className="flex items-center space-x-1 text-gray-700 hover:text-blue-800 transition-colors font-medium"
+                  onClick={() => setWhoWeAreOpen(!whoWeAreOpen)}
                 >
                   <span>Who we are</span>
-                  <FaChevronDown className="transform transition-transform duration-200" />
+                  <FaChevronDown
+                    className={`transform transition-transform duration-200 ${
+                      whoWeAreOpen ? 'rotate-180' : 'rotate-0'
+                    }`}
+                  />
                 </button>
 
-                <div className="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-50">
+                <div
+                  className={`absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-50 transform transition-opacity duration-200 ${
+                    whoWeAreOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
+                  }`}
+                >
                   <Link
                     to="/who-we-are/about"
+                    onClick={handleLinkClick}
                     className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-800 transition-colors"
                   >
                     About us
                   </Link>
                   <Link
                     to="/who-we-are/OurTeam"
+                    onClick={handleLinkClick}
                     className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-800 transition-colors"
                   >
                     Our Team
                   </Link>
                   <Link
                     to="/who-we-are/board"
+                    onClick={handleLinkClick}
                     className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-800 transition-colors"
                   >
                     Board of Trustees
                   </Link>
                   <Link
                     to="/who-we-are/locations"
+                    onClick={handleLinkClick}
                     className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-800 transition-colors"
                   >
                     Where We Work
                   </Link>
                   <Link
                     to="/who-we-are/achievements"
+                    onClick={handleLinkClick}
                     className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-800 transition-colors"
                   >
                     Our Achievements
@@ -101,108 +117,139 @@ const Navbar = () => {
                 Contact
               </Link>
 
-              {/* Dashboard Dropdown */}
-              <div className="relative group">
-                <button 
-                  className="flex items-center space-x-1 text-gray-700 hover:text-blue-800 transition-colors font-medium"
-                >
-                  <FaUser className="mr-1" />
-                  <span>Dashboard</span>
-                  <FaChevronDown className="transform transition-transform duration-200" />
-                </button>
+              <Link
+                to="/victim-dashboard"
+                className="text-gray-700 hover:text-blue-800 transition-colors font-medium flex items-center space-x-2"
+              >
+                <FaUserShield />
+                <span>Victim Dashboard</span>
+              </Link>
 
-                <div className="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-50">
-                  <Link 
-                    to="/victim-dashboard" 
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-800"
-                  >
-                    <FaUser className="inline mr-2" />
-                    Victim Dashboard
-                  </Link>
-                  <Link 
-                    to="/admin" 
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-800"
-                  >
-                    <FaLock className="inline mr-2" />
-                    Admin
-                  </Link>
-                  <Link 
-                    to="/donate" 
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-800"
-                  >
-                    <FaDonate className="inline mr-2" />
-                    Donate
-                  </Link>
-                </div>
-              </div>
+              <Link
+                to="/admin-dashboard"
+                className="text-gray-700 hover:text-blue-800 transition-colors font-medium flex items-center space-x-2"
+              >
+                <FaUserCog />
+                <span>Admin Dashboard</span>
+              </Link>
+
+              <Link
+                to="/donate"
+                className="text-white bg-green-600 hover:bg-green-700 font-medium px-4 py-2 rounded-md flex items-center space-x-2"
+              >
+                <FaHeart />
+                <span>Donate</span>
+              </Link>
             </div>
 
-            {/* Mobile Menu - Slide from right */}
-            <div className={`
-              fixed md:hidden top-0 right-0 h-screen w-[80%] max-w-sm
-              bg-slate-50 shadow-xl z-40
-              transform transition-transform duration-300 ease-in-out
-              ${isOpen ? 'translate-x-0' : 'translate-x-full'}
-              flex flex-col
-              pt-20 px-6
-            `}>
-              {/* Mobile Navigation Links */}
+            {/* Mobile Menu */}
+            <div
+              className={`fixed md:hidden top-0 right-0 h-screen w-[80%] max-w-sm bg-slate-50 shadow-xl z-40 transform transition-transform duration-300 ease-in-out ${
+                isOpen ? 'translate-x-0' : 'translate-x-full'
+              } flex flex-col pt-20 px-6`}
+            >
               <div className="flex flex-col space-y-4">
-                <Link to="/" onClick={() => setIsOpen(false)} className="text-gray-700 hover:text-blue-800">
+                <Link to="/" onClick={handleLinkClick} className="text-gray-700 hover:text-blue-800">
                   Home
                 </Link>
 
-                {/* Who We Are Dropdown */}
                 <div className="relative">
-                  <button className="flex items-center justify-between w-full text-gray-700 hover:text-blue-800">
+                  <button
+                    onClick={() => setWhoWeAreOpen(!whoWeAreOpen)}
+                    className="flex items-center space-x-1 text-gray-700 hover:text-blue-800 transition-colors font-medium"
+                  >
                     <span>Who we are</span>
-                    <FaChevronDown className="transform transition-transform duration-200" />
+                    <FaChevronDown
+                      className={`transform transition-transform duration-200 ${
+                        whoWeAreOpen ? 'rotate-180' : 'rotate-0'
+                      }`}
+                    />
                   </button>
-                  {/* ... dropdown items ... */}
+
+                  {whoWeAreOpen && (
+                    <div className="ml-4 mt-2 space-y-2">
+                      <Link
+                        to="/who-we-are/about"
+                        onClick={handleLinkClick}
+                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-blue-800"
+                      >
+                        About us
+                      </Link>
+                      <Link
+                        to="/who-we-are/OurTeam"
+                        onClick={handleLinkClick}
+                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-blue-800"
+                      >
+                        Our Team
+                      </Link>
+                      <Link
+                        to="/who-we-are/board"
+                        onClick={handleLinkClick}
+                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-blue-800"
+                      >
+                        Board of Trustees
+                      </Link>
+                      <Link
+                        to="/who-we-are/locations"
+                        onClick={handleLinkClick}
+                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-blue-800"
+                      >
+                        Where We Work
+                      </Link>
+                      <Link
+                        to="/who-we-are/achievements"
+                        onClick={handleLinkClick}
+                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-blue-800"
+                      >
+                        Our Achievements
+                      </Link>
+                    </div>
+                  )}
                 </div>
 
-                <Link to="/blogs" onClick={() => setIsOpen(false)} className="text-gray-700 hover:text-blue-800">
+                <Link to="/blogs" onClick={handleLinkClick} className="text-gray-700 hover:text-blue-800">
                   Blogs
                 </Link>
 
-                <Link to="/resources" onClick={() => setIsOpen(false)} className="text-gray-700 hover:text-blue-800">
+                <Link to="/resources" onClick={handleLinkClick} className="text-gray-700 hover:text-blue-800">
                   Resources
                 </Link>
 
-                <Link to="/contact" onClick={() => setIsOpen(false)} className="text-gray-700 hover:text-blue-800">
+                <Link to="/contact" onClick={handleLinkClick} className="text-gray-700 hover:text-blue-800">
                   Contact
                 </Link>
 
-                {/* Dashboard Links */}
-                <div className="pt-4 mt-4 border-t border-gray-200">
-                  <Link to="/victim-dashboard" onClick={() => setIsOpen(false)} 
-                    className="flex items-center space-x-2 text-gray-700 hover:text-blue-800">
-                    <FaUser />
-                    <span>Victim Dashboard</span>
-                  </Link>
+                <Link
+                  to="/victim-dashboard"
+                  className="text-gray-700 hover:text-blue-800 transition-colors font-medium flex items-center space-x-2"
+                >
+                  <FaUserShield />
+                  <span>Victim Dashboard</span>
+                </Link>
 
-                  <Link to="/admin" onClick={() => setIsOpen(false)}
-                    className="flex items-center space-x-2 text-gray-700 hover:text-blue-800 mt-4">
-                    <FaLock />
-                    <span>Admin</span>
-                  </Link>
+                <Link
+                  to="/admin-dashboard"
+                  className="text-gray-700 hover:text-blue-800 transition-colors font-medium flex items-center space-x-2"
+                >
+                  <FaUserCog />
+                  <span>Admin Dashboard</span>
+                </Link>
 
-                  <Link to="/donate" onClick={() => setIsOpen(false)}
-                    className="flex items-center space-x-2 bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700 mt-4">
-                    <FaDonate />
-                    <span>Donate</span>
-                  </Link>
-                </div>
+                <Link
+                  to="/donate"
+                  className="text-white bg-green-600 hover:bg-green-700 font-medium px-4 py-2 rounded-md flex items-center space-x-2"
+                >
+                  <FaHeart />
+                  <span>Donate</span>
+                </Link>
               </div>
             </div>
 
-            {/* Overlay when mobile menu is open */}
-            <div 
-              className={`
-                fixed inset-0 bg-black/50 z-30 md:hidden
-                transition-opacity duration-300
-                ${isOpen ? 'opacity-100 visible' : 'opacity-0 invisible'}
-              `}
+            {/* Overlay */}
+            <div
+              className={`fixed inset-0 bg-black/50 z-30 md:hidden transition-opacity duration-300 ${
+                isOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
+              }`}
               onClick={() => setIsOpen(false)}
             />
           </div>
