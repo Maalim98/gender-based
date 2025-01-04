@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { FaUsers, FaHandshakeSimple, FaLightbulb, FaChartLine, FaHeart, FaGlobe, FaEnvelope } from 'react-icons/fa6';
 import { motion } from 'framer-motion';
-import supportCenter from '../../assets/images/support center.jpg';
+import supportCenter from '../../assets/images/sapport center.jpg';
 
 const NetworkPage = () => {
   const [formData, setFormData] = useState({

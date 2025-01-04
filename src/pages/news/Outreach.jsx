@@ -1,6 +1,6 @@
 import { FaMapMarkerAlt, FaUsers, FaHandHoldingHeart, FaCalendar, FaAmbulance, FaPhoneVolume } from 'react-icons/fa';
 import { motion } from 'framer-motion';
-import awareness from '../../assets/images/awareness2.jpg';
+import awareness from '../../assets/images/awareeness2.jpg';
 
 const Outreach = () => {
   const upcomingVisits = [

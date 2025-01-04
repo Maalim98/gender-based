@@ -1,6 +1,6 @@
 import { FaPhone, FaArrowRight } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
-import support from '../assets/images/support.jpg';
+import support from '../assets/images/sapport.jpg';
 
 const HeroSection = () => {
   const navigate = useNavigate();

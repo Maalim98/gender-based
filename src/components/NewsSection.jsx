@@ -4,9 +4,9 @@ import { Link } from 'react-router-dom';
 import { mobileClasses } from '../styles/responsive';
 import ResponsiveContainer from './layout/ResponsiveContainer';
 
-import supportCenter from "../assets/images/support center.jpg"
-import awareness from "../assets/images/awareness2.jpg"
-import meeting from "../assets/images/meeting.jpg"
+import supportCenter from "../assets/images/sapport center.jpg"
+import awareness from "../assets/images/awareeness2.jpg"
+import meeting from "../assets/images/meeeting.jpg"
 
 const NewsSection = () => {
   const news = [

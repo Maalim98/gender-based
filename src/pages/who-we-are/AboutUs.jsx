@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FaHandHoldingHeart, FaUsers, FaLightbulb, FaBalanceScale } from 'react-icons/fa';
-import womanImage from '../../assets/images/xalimo.jpg'; // Ensure this path is correct
+import womanImage from '../../assets/images/halimo.jpg'; // Ensure this path is correct
 import { Link } from 'react-router-dom';
 
 export const AboutUs = () => {

@@ -1,6 +1,6 @@
 import { FaMapMarkerAlt, FaUsers, FaHandHoldingHeart, FaCalendar, FaCheck, FaArrowRight, FaPhone } from 'react-icons/fa';
 import { motion } from 'framer-motion';
-import supportCenter from '../../assets/images/support center.jpg';
+import supportCenter from '../../assets/images/sapport center.jpg';
 
 const CommunityOutreach = () => {
   const upcomingVisits = [

@@ -2,9 +2,9 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 
-import woman1 from "../assets/images/woman1.jpg";
-import woman4 from "../assets/images/woman4.jpg"; // Assuming the correct file name
-import xalimo from "../assets/images/xalimo.jpg"; // Using xalimo.jpg as a fallback for missing images
+import woman1 from "../assets/images/wuman2.jpg";
+import woman4 from "../assets/images/wuman4.jpg"; // Assuming the correct file name
+import xalimo from "../assets/images/halimo.jpg"; // Using xalimo.jpg as a fallback for missing images
 
 const ImpactStoriesSection = () => {
     const [activeTestimonial, setActiveTestimonial] = useState(0);

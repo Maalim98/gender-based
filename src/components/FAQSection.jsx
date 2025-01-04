@@ -35,38 +35,22 @@ const FAQSection = () => {
     }
   ];
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.3 // Reduced for faster sequence
-      }
-    }
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: -50 }, // Changed from 50 to -50 to drop from above
-    visible: {
-      opacity: 1,
+  const simpleAnimation = {
+    initial: { opacity: 0, y: 20 },
+    whileInView: { 
+      opacity: 1, 
       y: 0,
-      transition: {
-        type: "spring",
-        duration: 1,
-        bounce: 0.3 // Added slight bounce effect
-      }
-    }
+      transition: { duration: 0.5 }
+    },
+    viewport: { once: true, margin: "-100px" }
   };
 
   return (
-    <section className="py-20 bg-gradient-to-b from-gray-50 to-white overflow-hidden">
+    <section className="py-20 bg-gradient-to-b from-gray-50 to-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div 
           className="mb-12 md:mb-16 text-center"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ margin: "-100px" }}
-          transition={{ duration: 1, delay: 0.2 }} // Reduced delay
+          {...simpleAnimation}
         >
           <div className="inline-block">
             <h2 className="text-3xl md:text-4xl font-bold text-emerald-800 relative">
@@ -79,50 +63,31 @@ const FAQSection = () => {
         
         <motion.div 
           className="max-w-3xl mx-auto space-y-4"
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ margin: "-100px" }}
+          {...simpleAnimation}
         >
-          {faqs.map((faq, index) => (
-            <motion.div
+          {faqs.map((faq) => (
+            <FAQItem 
               key={faq.question}
-              variants={itemVariants}
-              custom={index}
-              className="transform hover:-translate-y-1 transition-all duration-300"
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ margin: "-100px" }}
-              transition={{
-                delay: index * 0.2, // Add delay based on index
-                duration: 0.5
-              }}
-            >
-              <FAQItem 
-                question={faq.question}
-                answer={faq.answer}
-              />
-            </motion.div>
+              question={faq.question}
+              answer={faq.answer}
+            />
           ))}
         </motion.div>
 
         <motion.div 
           className="text-center mt-16"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ margin: "-100px" }}
-          transition={{ duration: 1, delay: 0.8 }}
+          {...simpleAnimation}
         >
           <Link 
             to="/gbv-facts" 
-            className="group inline-flex items-center gap-3 bg-gradient-to-r from-emerald-600 to-emerald-800 
+            className="inline-flex items-center gap-3 bg-gradient-to-r from-emerald-600 to-emerald-800 
                      text-white px-8 py-4 rounded-full text-lg font-semibold
-                     hover:from-emerald-700 hover:to-emerald-900 transition-all duration-500
-                     shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+                     hover:from-emerald-700 hover:to-emerald-900 transition-all duration-300
+                     shadow-lg hover:shadow-xl"
           >
             Learn More About GBV
             <svg 
-              className="w-5 h-5 group-hover:translate-x-2 transition-transform duration-500" 
+              className="w-5 h-5 transition-transform duration-300" 
               fill="none" 
               stroke="currentColor" 
               viewBox="0 0 24 24"
@@ -146,16 +111,10 @@ const FAQItem = ({ question, answer }) => {
         onClick={() => setIsOpen(!isOpen)}
       >
         <span className="font-semibold text-emerald-800">{question}</span>
-        <motion.div
-          initial={false}
-          animate={{ rotate: isOpen ? 180 : 0 }}
-          transition={{ duration: 0.3 }}
-        >
-          {isOpen ? 
-            <FaChevronUp className="text-emerald-600" /> : 
-            <FaChevronDown className="text-emerald-600" />
-          }
-        </motion.div>
+        {isOpen ? 
+          <FaChevronUp className="text-emerald-600" /> : 
+          <FaChevronDown className="text-emerald-600" />
+        }
       </button>
       
       <motion.div 
@@ -164,10 +123,7 @@ const FAQItem = ({ question, answer }) => {
           height: isOpen ? "auto" : 0,
           opacity: isOpen ? 1 : 0
         }}
-        transition={{
-          duration: 0.3,
-          ease: "easeInOut"
-        }}
+        transition={{ duration: 0.3 }}
       >
         <div className="px-6 py-4 border-t border-emerald-100 bg-emerald-50/30">
           <p className="text-gray-600 leading-relaxed whitespace-pre-line">{answer}</p>
