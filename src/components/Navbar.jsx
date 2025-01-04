@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FaPhone, FaChevronDown, FaBars, FaTimes, FaUserShield, FaUserCog, FaHeart } from 'react-icons/fa';
 
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [whoWeAreOpen, setWhoWeAreOpen] = useState(false);
@@ -29,9 +30,9 @@ const Navbar = () => {
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-center h-16">
             {/* Logo */}
-            <Link to="/" className="text-2xl font-bold flex items-center">
-              <span className="text-blue-800">GBV</span>
-              <span className="text-gray-700">Support</span>
+            <Link to="/" className="text-lg sm:text-xl  md:text-2xl font-bold flex items-center">
+              <span className="text-gray-900">Nomad </span>
+              <span className="text-green-700">Advocacy</span>
             </Link>
 
             {/* Mobile Menu Button */}
@@ -56,9 +57,7 @@ const Navbar = () => {
                 >
                   <span>Who we are</span>
                   <FaChevronDown
-                    className={`transform transition-transform duration-200 ${
-                      whoWeAreOpen ? 'rotate-180' : 'rotate-0'
-                    }`}
+                    className={`transform transition-transform duration-200 ${whoWeAreOpen ? 'rotate-180' : 'rotate-0'}`}
                   />
                 </button>
 
@@ -160,9 +159,7 @@ const Navbar = () => {
                   >
                     <span>Who we are</span>
                     <FaChevronDown
-                      className={`transform transition-transform duration-200 ${
-                        whoWeAreOpen ? 'rotate-180' : 'rotate-0'
-                      }`}
+                      className={`transform transition-transform duration-200 ${whoWeAreOpen ? 'rotate-180' : 'rotate-0'}`}
                     />
                   </button>
 
