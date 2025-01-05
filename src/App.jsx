@@ -21,6 +21,9 @@ import HealthcareIntegration from './pages/blogs/HealthcareIntegration';
 import CulturalEngagement from './pages/blogs/CulturalEngagement';
 import NetworkPage from './pages/news/NetworkPage';
 import Contact from './pages/Contact';
+import CrisisResponse from './pages/services/CrisisResponse';
+import Counselling from './pages/services/Counselling';
+import SupportGroup from './pages/services/SupportGroup';
 
 
 function App() {
@@ -53,6 +56,11 @@ function App() {
               <Route path="healthcare-integration" element={<HealthcareIntegration />} />
               <Route path="cultural-engagement" element={<CulturalEngagement />} />
             </Route>
+             {/* Service Routes */}
+             <Route path="/services/crisis-response" element={<CrisisResponse />} />
+            <Route path="/services/counseling-support" element={<Counselling />} />
+            <Route path="/services/support-groups" element={<SupportGroup />} />
+            
           </Routes>
         </main>
         <Footer />

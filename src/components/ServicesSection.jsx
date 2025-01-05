@@ -1,4 +1,4 @@
-import { FaShieldAlt, FaHandsHelping, FaHospital } from 'react-icons/fa';
+import { FaShieldAlt, FaHandsHelping, FaUsers } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
 
@@ -17,9 +17,9 @@ const ServicesSection = () => {
       color: "from-emerald-500/10 to-teal-500/10"
     },
     {
-      icon: <FaHospital className="w-6 h-6" />,
-      title: "Medical Care",
-      description: "Access to comprehensive medical care and support services.",
+      icon: <FaUsers className="w-6 h-6" />,
+      title: "Support Groups",
+      description: "Join our healing community through peer support groups and empowerment programs for survivors.",
       color: "from-blue-500/10 to-indigo-500/10"
     }
   ];
