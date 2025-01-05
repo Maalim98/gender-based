@@ -2,8 +2,9 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 
-import woman1 from "../assets/images/slide3.jpg";
-import woman4 from "../assets/images/wuman4.jpg"; // Assuming the correct file name
+import woman1 from "../assets/images/smilinglady.jpg";
+import woman4 from "../assets/images/wuman4.jpg"; 
+import dimple from "../assets/images/dimpledlady.jpg"; 
 import xalimo from "../assets/images/halimo.jpg"; // Using xalimo.jpg as a fallback for missing images
 
 const ImpactStoriesSection = () => {
@@ -41,7 +42,7 @@ const ImpactStoriesSection = () => {
             story: `Working with teenage survivors has shown me how crucial early intervention is. One young girl's 
             story particularly moved me - she went from barely speaking to becoming a peer counselor herself. GVRC's 
             approach to healing considers both emotional and cultural aspects.`,
-            image: woman4,
+            image: dimple,
         },
         {
             name: "Halima Omar Sheikh",

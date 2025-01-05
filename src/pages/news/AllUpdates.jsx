@@ -1,4 +1,4 @@
-import { FaCalendar, FaTag, FaArrowRight, FaSearch, FaFilter } from 'react-icons/fa';
+import { FaTag, FaArrowRight, FaSearch, FaFilter } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 import { useState } from 'react';
 import awareness from '../../assets/images/awareness2.jpg';
@@ -20,7 +20,7 @@ const AllUpdates = () => {
   const updates = [
     {
       title: "Mobile Clinic Reaches Remote Villages",
-      date: "March 20, 2024",
+     
       category: "outreach",
       excerpt: "Our mobile support unit provided essential services to five remote villages in Garissa County, reaching over 200 individuals.",
       image: awareness,
@@ -28,7 +28,7 @@ const AllUpdates = () => {
     },
     {
       title: "Women's Empowerment Workshop Success",
-      date: "March 15, 2024",
+      
       category: "empowerment",
       excerpt: "50 women completed our comprehensive skills training program, gaining tools for economic independence.",
       image: woman5,
@@ -36,7 +36,7 @@ const AllUpdates = () => {
     },
     {
       title: "Community Leaders Unite Against GBV",
-      date: "March 10, 2024",
+      
       category: "community",
       excerpt: "Local leaders and religious figures gathered to strengthen community response to gender-based violence.",
       image: xalimo,
@@ -147,10 +147,6 @@ const AllUpdates = () => {
               </div>
               
               <div className="p-6">
-                <div className="flex items-center text-gray-500 text-sm mb-3">
-                  <FaCalendar className="mr-2" />
-                  {update.date}
-                </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">
                   {update.title}
                 </h3>

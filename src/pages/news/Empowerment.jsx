@@ -157,15 +157,9 @@ const Empowerment = () => {
             <div className="text-center mb-12">
               <h2 className="text-3xl font-semibold mb-4 text-gray-800">Need Support?</h2>
               <p className="text-gray-600 mb-8">
-                Choose how you'd like to reach us. Call us directly for immediate support, 
-                or fill out the form below and we'll get back to you within 24 hours.
+                fill out the form below and we'll get back to you within 24 hours.
               </p>
-              <a 
-                href="tel:0717069813"
-                className="bg-green-600 text-white px-8 py-3 rounded-md inline-block hover:bg-green-700 transition-colors font-semibold"
-              >
-                Call Us: 0717 069 813
-              </a>
+             
             </div>
 
             <div className="max-w-xl mx-auto">

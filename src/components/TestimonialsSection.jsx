@@ -17,7 +17,7 @@ const TestimonialsSection = () => {
     },
     {
       quote: "The youth mentorship program changed my perspective on life. I learned valuable skills and found a supportive community that believes in my potential.",
-      author: "Mohamed Hassan.",
+      author: " Najma Aden.",
       role: "Youth Advocate",
       location: "Balambala"
     },
@@ -29,13 +29,13 @@ const TestimonialsSection = () => {
     },
     {
       quote: "The mobile outreach services have been a lifeline for our remote village. We now have access to essential support and resources we never had before.",
-      author: "Najma Aden.",
+      author: "Mohamed Hassan.",
       role: "Village Elder",
       location: "Fafi"
     },
     {
       quote: "Being part of the support group helped me find my voice again. The solidarity and understanding I found here gave me strength to move forward.",
-      author: "Zainab Khalif.",
+      author: "Nawal Sheikh .",
       role: "Support Group Member",
       location: "Ijara"
     }
