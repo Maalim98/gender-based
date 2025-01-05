@@ -1,6 +1,6 @@
 import { FaPhone, FaArrowRight } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
-import support from '../assets/images/sapport.jpg';
+import support from '../assets/images/darkbg.jpg';
 
 const HeroSection = () => {
   const navigate = useNavigate();
@@ -18,11 +18,11 @@ const HeroSection = () => {
         }}
       >
         {/* Dark Overlay */}
-        <div className="absolute inset-0 bg-black/60"></div>
+        <div className="absolute inset-0 bg-black/50"></div>
       </div>
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 py-8">
+      <div className="relative z-10 container mx-auto px-4 sm:px-6 md:px-12 py-8">
         <div className="max-w-3xl text-white space-y-4">
           <h1 className="text-4xl md:text-6xl font-bold leading-tight">
             Supporting Survivors,
@@ -38,7 +38,7 @@ const HeroSection = () => {
           </p>
 
           {/* Emergency Box */}
-          <div className="bg-black/30 backdrop-blur-sm p-3 rounded-lg inline-block mt-2">
+          <div className="bg-black/30 backdrop-blur-sm p-3 rounded-lg inline-block mt-2 border border-blue-300">
             <p className="text-blue-200 text-sm mb-1">24/7 Emergency Helpline</p>
             <a 
               href="tel:0717069813" 
@@ -50,20 +50,22 @@ const HeroSection = () => {
           </div>
 
           {/* Action Buttons */}
-          <div className="flex flex-wrap gap-3 pt-2">
+          <div className="flex flex-wrap gap-4 pt-4">
             <button 
-              onClick={() => navigate('/emergency')}
-              className="bg-red-600 hover:bg-red-700 px-5 py-2 rounded-lg font-semibold flex items-center gap-2 transition-colors text-sm md:text-base"
+              onClick={() => navigate('/victim-dashboard')}
+              className="bg-red-600 hover:bg-red-700 px-6 py-3 rounded-lg font-semibold flex items-center gap-2 transition-all text-sm md:text-base group"
             >
               Get Help Now
-              <FaArrowRight />
+              <FaArrowRight className="group-hover:translate-x-1 transition-transform" />
             </button>
-            <button 
-              onClick={() => navigate('/get-support')}
-              className="bg-white/20 hover:bg-white/30 px-5 py-2 rounded-lg font-semibold transition-colors text-sm md:text-base"
+            <a 
+              href="https://unhabitat.org/sites/default/files/download-manager-files/Report%20Preventing%20Gender-based%20Violence%20in%20the%20Horn%2C%20East%20and%20Southern%20Africa.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-white/10 hover:bg-white/20 border border-white/20 px-6 py-3 rounded-lg font-semibold transition-all text-sm md:text-base"
             >
               Learn More
-            </button>
+            </a>
           </div>
         </div>
       </div>

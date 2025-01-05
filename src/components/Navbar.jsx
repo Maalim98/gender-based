@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FaPhone, FaChevronDown, FaBars, FaTimes, FaUserShield, FaUserCog, FaHeart } from 'react-icons/fa';
 
-
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [whoWeAreOpen, setWhoWeAreOpen] = useState(false);
@@ -26,11 +25,11 @@ const Navbar = () => {
       </div>
 
       {/* Main Navbar */}
-      <nav className="bg-slate-50 shadow-sm relative">
+      <nav className="bg-slate-50 shadow-sm fixed top-0 w-full z-50">
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-center h-16">
             {/* Logo */}
-            <Link to="/" className="text-lg sm:text-xl  md:text-2xl font-bold flex items-center">
+            <Link to="/" className="text-lg sm:text-xl md:text-2xl font-bold flex items-center">
               <span className="text-gray-900">Nomad </span>
               <span className="text-green-700">Advocacy</span>
             </Link>
@@ -252,6 +251,11 @@ const Navbar = () => {
           </div>
         </div>
       </nav>
+
+      {/* Add padding for fixed navbar */}
+      <div className="pt-16">
+        {/* Your page content here */}
+      </div>
     </>
   );
 };
