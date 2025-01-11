@@ -107,11 +107,7 @@ const Navbar = () => {
                 Blogs
               </Link>
 
-              <Link 
-                to="/resources" 
-                onClick={handleLinkClick} 
-                className="text-gray-700 hover:text-blue-800"
-              >
+              <Link to="/resources" className="text-gray-700 hover:text-blue-800 transition-colors font-medium">
                 Resources
               </Link>
 
@@ -120,11 +116,11 @@ const Navbar = () => {
               </Link>
 
               <Link
-                to="/victim-dashboard"
+                to="/report"
                 className="text-gray-700 hover:text-blue-800 transition-colors font-medium flex items-center space-x-2"
               >
                 <FaUserShield />
-                <span>Victim Dashboard</span>
+                <span>Report</span>
               </Link>
 
               <Link
@@ -220,11 +216,11 @@ const Navbar = () => {
                 </Link>
 
                 <Link
-                  to="/victim-dashboard"
+                  to="/report"
                   className="text-gray-700 hover:text-blue-800 transition-colors font-medium flex items-center space-x-2"
                 >
                   <FaUserShield />
-                  <span>Victim Dashboard</span>
+                  <span>Report</span>
                 </Link>
 
                 <Link
