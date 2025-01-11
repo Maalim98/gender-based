@@ -1,71 +1,124 @@
 import React from 'react';
-import { FaShieldAlt, FaHandsHelping, FaHospital } from 'react-icons/fa';
-
+import { Link } from 'react-router-dom';
+import { 
+  FaPhoneAlt, FaHospital, FaBalanceScale, 
+  FaHome, FaHandHoldingHeart, FaGraduationCap,
+  FaUsers, FaBookMedical, FaHandsHelping 
+} from 'react-icons/fa';
 
 const ResourcesSection = () => {
-  
+  const resources = [
+    {
+      title: "24/7 Crisis Support",
+      icon: <FaPhoneAlt className="text-2xl" />,
+      description: "Immediate support available in English, Swahili, and Somali",
+      services: [
+        "Emergency hotline: 0800-xxx-xxx",
+        "SMS support: 21393",
+        "WhatsApp support available",
+        "Confidential crisis counseling"
+      ]
+    },
+    {
+      title: "Medical Services",
+      icon: <FaHospital className="text-2xl" />,
+      description: "Comprehensive medical care and support services",
+      services: [
+        "Emergency medical care",
+        "Post-assault care",
+        "Referral to specialized care",
+        "Mobile clinic services"
+      ]
+    },
+    {
+      title: "Legal Aid",
+      icon: <FaBalanceScale className="text-2xl" />,
+      description: "Free legal assistance and advocacy support",
+      services: [
+        "Legal consultation",
+        "Court representation",
+        "Document preparation",
+        "Rights education"
+      ]
+    }
+  ];
 
-  
-//         {/* Services Grid */}
-//         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 md:gap-10 max-w-6xl mx-auto">
-//           {services.map((service, index) => (
-//             <div 
-//               key={service.title}
-//               className={`group relative bg-white rounded-2xl p-6 sm:p-8 shadow-lg hover:shadow-xl 
-//                 transition-all duration-300 hover:-translate-y-1 border border-gray-100
-//                 ${index === 1 ? 'sm:translate-y-4 lg:translate-y-8' : ''}`}
-//             >
-//               {/* Gradient Background */}
-//               <div className={`absolute inset-0 bg-gradient-to-br ${service.color} 
-//                 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl`}></div>
-              
-//               {/* Icon */}
-//               <div className="relative mb-6">
-//                 <div className="w-14 h-14 flex items-center justify-center rounded-xl 
-//                   bg-emerald-100 text-emerald-600 group-hover:bg-emerald-50 transition-colors">
-//                   {service.icon}
-//                 </div>
-//               </div>
+  return (
+    <section className="pt-28 pb-16 bg-slate-50">
+      <div className="max-w-7xl mx-auto px-4">
+        {/* Header */}
+        <div className="text-center mb-12">
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">
+            Available Resources
+          </h2>
+          <p className="text-gray-600">
+            Comprehensive support services for survivors
+          </p>
+        </div>
 
-//               {/* Content */}
-//               <div className="relative">
-//                 <h3 className="text-xl sm:text-2xl font-bold text-gray-800 mb-4 
-//                   group-hover:text-emerald-700 transition-colors">
-//                   {service.title}
-//                 </h3>
-//                 <p className="text-gray-600 leading-relaxed">
-//                   {service.description}
-//                 </p>
-//               </div>
+        {/* Resources Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {resources.map((resource, index) => (
+            <div 
+              key={index}
+              className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow"
+            >
+              {/* Icon & Title */}
+              <div className="flex items-center gap-4 mb-4">
+                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center text-blue-600">
+                  {resource.icon}
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900">
+                  {resource.title}
+                </h3>
+              </div>
 
-//               {/* Hover Arrow */}
-//               <div className="absolute bottom-6 right-6 opacity-0 group-hover:opacity-100 
-//                 transition-opacity duration-300">
-//                 <div className="w-8 h-8 rounded-full bg-emerald-50 flex items-center justify-center">
-//                   <svg className="w-4 h-4 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-//                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
-//                   </svg>
-//                 </div>
-//               </div>
-//             </div>
-//           ))}
-//         </div>
+              {/* Description */}
+              <p className="text-gray-600 mb-4">
+                {resource.description}
+              </p>
 
-//         {/* Mobile Scroll Indicator */}
-//         <div className="flex gap-2 justify-center mt-6 sm:hidden">
-//           {services.map((_, index) => (
-//             <div 
-//               key={index} 
-//               className={`h-1 rounded-full transition-all duration-300
-//                 ${index === 0 ? 'w-6 bg-emerald-500' : 'w-2 bg-gray-300'}`}
-//             ></div>
-//           ))}
-//         </div>
-//       </div>
-//     </section>
-//   
-  
-// 
+              {/* Services */}
+              <ul className="space-y-2">
+                {resource.services.map((service, idx) => (
+                  <li key={idx} className="flex items-center text-gray-600">
+                    <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></span>
+                    {service}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+
+        {/* Emergency Contact */}
+        <div className="mt-12 bg-red-50 rounded-lg p-8 text-center">
+          <h3 className="text-2xl font-bold text-red-600 mb-4">
+            Need Immediate Help?
+          </h3>
+          <p className="text-lg mb-6">
+            Our 24/7 emergency hotline is always available
+          </p>
+          <div className="flex flex-col sm:flex-row justify-center gap-4">
+            <a 
+              href="tel:0717069813"
+              className="bg-red-600 text-white px-6 py-3 rounded-lg hover:bg-red-700 transition-colors flex items-center justify-center gap-2"
+            >
+              <FaPhoneAlt />
+              <span>Call Now: 0717 069 813</span>
+            </a>
+            <a 
+              href="sms:21393"
+              className="bg-red-100 text-red-600 px-6 py-3 rounded-lg hover:bg-red-200 transition-colors flex items-center justify-center gap-2"
+            >
+              <FaPhoneAlt />
+              <span>SMS: 21393</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
 };
 
 export default ResourcesSection;

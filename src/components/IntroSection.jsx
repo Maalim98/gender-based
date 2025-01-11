@@ -38,8 +38,8 @@ const IntroSection = () => {
                 >
                     <div className="inline-block">
                         <h2 className="text-3xl md:text-4xl font-bold text-emerald-800 relative">
-                            <span className="absolute -left-4 md:-left-6 top-0 text-5xl md:text-6xl text-emerald-200/50">W</span>
-                            WHO ARE WE?
+                            <span className="absolute -left-4 md:-left-6 top-0 text-5xl md:text-6xl text-emerald-200/50">N</span>
+                            Nomad Advocacy
                         </h2>
                         <div className="h-1 w-full bg-gradient-to-r from-emerald-500 to-yellow-400 mt-4"></div>
                     </div>
@@ -178,7 +178,7 @@ const IntroSection = () => {
                                 <motion.ul variants={itemVariants} className="list-none space-y-3 ml-4">
                                     {[
                                         "Mobile outreach programs",
-                                        "'Sister's Circle' support groups",
+                                        "'Deris wanaag' support groups",
                                         "'Youth Champions' initiatives",
                                         "Economic empowerment programs"
                                     ].map((item, index) => (

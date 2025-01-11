@@ -52,7 +52,7 @@ const HeroSection = () => {
           {/* Action Buttons */}
           <div className="flex flex-wrap gap-4 pt-4">
             <button 
-              onClick={() => navigate('/victim-dashboard')}
+              onClick={() => navigate('/emergency')}
               className="bg-red-600 hover:bg-red-700 px-6 py-3 rounded-lg font-semibold flex items-center gap-2 transition-all text-sm md:text-base group"
             >
               Get Help Now

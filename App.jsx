@@ -20,6 +20,8 @@ import CommunityMobilization from './pages/blogs/CommunityMobilization';
 import HealthcareIntegration from './pages/blogs/HealthcareIntegration';
 import CulturalEngagement from './pages/blogs/CulturalEngagement';
 import NetworkPage from './pages/news/NetworkPage';
+import ResourcesSection from './components/ResourcesSection';
+import Resources from './pages/Resources';
 
 function App() {
   return (
@@ -42,6 +44,7 @@ function App() {
             <Route path="/news/empowerment" element={<Empowerment />} />
             <Route path="/news/network" element={<NetworkPage />} />
             <Route path="/get-support" element={<GetSupport />} />
+            <Route path="/resources" element={<Resources />} />
             
             <Route path="/blogs">
               <Route path="law-enforcement" element={<LawEnforcement />} />

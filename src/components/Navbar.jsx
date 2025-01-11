@@ -107,7 +107,11 @@ const Navbar = () => {
                 Blogs
               </Link>
 
-              <Link to="/resources" className="text-gray-700 hover:text-blue-800 transition-colors font-medium">
+              <Link 
+                to="/resources" 
+                onClick={handleLinkClick} 
+                className="text-gray-700 hover:text-blue-800"
+              >
                 Resources
               </Link>
 
