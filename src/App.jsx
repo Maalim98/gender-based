@@ -24,6 +24,7 @@ import Contact from './pages/Contact';
 import CrisisResponse from './pages/services/CrisisResponse';
 import Counselling from './pages/services/Counselling';
 import SupportGroup from './pages/services/SupportGroup';
+import Donate from './pages/Donate';
 
 
 function App() {
@@ -61,6 +62,7 @@ function App() {
             <Route path="/services/counseling-support" element={<Counselling />} />
             <Route path="/services/support-groups" element={<SupportGroup />} />
             
+            <Route path="/donate" element={<Donate />} />
           </Routes>
         </main>
         <Footer />
