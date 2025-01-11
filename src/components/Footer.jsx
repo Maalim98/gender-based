@@ -6,16 +6,16 @@ const Footer = () => {
   return (
     <footer className="bg-gray-900">
       {/* Emergency Banner */}
-      <div className="bg-blue-800">
+      <div className="bg-gray-800">
         <div className="max-w-7xl mx-auto px-4 py-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="text-center md:text-left">
               <h3 className="text-xl md:text-2xl font-bold text-white">24/7 Emergency Helpline</h3>
-              <p className="text-blue-100 text-sm md:text-base">Immediate support available anytime</p>
+              <p className="text-gray-300 text-sm md:text-base">Immediate support available anytime</p>
             </div>
             <a 
               href="tel:+254717069813" 
-              className="bg-white text-blue-800 px-6 py-2 rounded-md font-bold hover:bg-blue-50 transition-colors flex items-center gap-2"
+              className="bg-white text-gray-900 px-6 py-2 rounded-md font-bold hover:bg-gray-100 transition-colors flex items-center gap-2"
             >
               <FaPhone className="animate-pulse" />
               0717 069 813
@@ -30,7 +30,7 @@ const Footer = () => {
           {/* About Section */}
           <div>
             <div className="text-2xl font-bold text-white mb-4">
-              <span className="text-blue-500">GBV</span> Support
+              <span className="text-gray-300">Nomad</span> Advocacy
             </div>
             <p className="text-gray-400 text-sm leading-relaxed">
               Empowering communities and supporting survivors in Garissa County through compassion, 
@@ -71,8 +71,8 @@ const Footer = () => {
               </li>
               <li className="flex items-center gap-3 text-gray-400 text-sm">
                 <FaEnvelope className="flex-shrink-0" />
-                <a href="mailto:info@gbvsupport.org" className="hover:text-white transition-colors">
-                  info@gbvsupport.org
+                <a href="mailto:info@nomadupport.org" className="hover:text-white transition-colors">
+                  info@nomadupport.org
                 </a>
               </li>
             </ul>
@@ -98,7 +98,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="mt-12 pt-8 border-t border-gray-800">
           <div className="text-center text-gray-400 text-sm">
-            <p>&copy; {new Date().getFullYear()} GBV Support. All rights reserved.</p>
+            <p>&copy; {new Date().getFullYear()} Nomad Advocacy. All rights reserved.</p>
           </div>
         </div>
       </div>
