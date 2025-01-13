@@ -1,11 +1,18 @@
+import unWomenLogo from '../assets/images/un-women-logo.png';
+import unicefLogo from '../assets/images/unicef-logo.png';
+import whoLogo from '../assets/images/who-logo.jpg';
+import policeLogo from '../assets/images/kenya-police.png';
+import healthLogo from '../assets/images/ministry-of-health.png';
+import fidaLogo from '../assets/images/fida-kenya.jpg';
+
 const PartnersSection = () => {
     const partners = [
-      { name: "UN Women", logo: "../src/assets/images/un-women-logo.png" },
-      { name: "UNICEF", logo: "../src/assets/images/unicef-logo.png" },
-      { name: "WHO", logo: "../src/assets/images/who-logo.jpg" },
-      { name: "Local Police", logo: "../src/assets/images/kenya-police.png" },
-      { name: "Ministry of Health", logo: "../src/assets/images/ministry-of-health.png" },
-      { name: "Local NGO", logo: "../src/assets/images/fida-kenya.jpg" }
+      { name: "UN Women", logo: unWomenLogo },
+      { name: "UNICEF", logo: unicefLogo },
+      { name: "WHO", logo: whoLogo },
+      { name: "Local Police", logo: policeLogo },
+      { name: "Ministry of Health", logo: healthLogo },
+      { name: "Local NGO", logo: fidaLogo }
     ];
   
     return (

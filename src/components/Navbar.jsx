@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { FaPhone, FaChevronDown, FaBars, FaTimes, FaUserShield, FaUserCog, FaHeart } from 'react-icons/fa';
+import { FaPhone, FaChevronDown, FaBars, FaTimes, FaUserShield, FaUserCog, FaHeart, FaHandHoldingHeart } from 'react-icons/fa';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -117,10 +117,10 @@ const Navbar = () => {
 
               <Link
                 to="/report"
-                className="text-gray-700 hover:text-blue-800 transition-colors font-medium flex items-center space-x-2"
+                onClick={handleLinkClick}
+                className="text-gray-700 hover:text-blue-800 transition-colors font-medium"
               >
-                <FaUserShield />
-                <span>Report</span>
+                Report
               </Link>
 
               <Link
@@ -133,9 +133,10 @@ const Navbar = () => {
 
               <Link
                 to="/donate"
-                className="text-white bg-green-600 hover:bg-green-700 font-medium px-4 py-2 rounded-md flex items-center space-x-2"
+                onClick={handleLinkClick}
+                className="text-white bg-green-600 hover:bg-green-700 font-medium px-3 py-1.5 rounded-md flex items-center gap-1.5 text-sm w-fit"
               >
-                <FaHeart />
+                <FaHandHoldingHeart className="text-pink-200 text-xs" />
                 <span>Donate</span>
               </Link>
             </div>
@@ -217,10 +218,10 @@ const Navbar = () => {
 
                 <Link
                   to="/report"
-                  className="text-gray-700 hover:text-blue-800 transition-colors font-medium flex items-center space-x-2"
+                  onClick={handleLinkClick}
+                  className="text-gray-700 hover:text-blue-800 transition-colors font-medium"
                 >
-                  <FaUserShield />
-                  <span>Report</span>
+                  Report
                 </Link>
 
                 <Link
@@ -233,9 +234,10 @@ const Navbar = () => {
 
                 <Link
                   to="/donate"
-                  className="text-white bg-green-600 hover:bg-green-700 font-medium px-4 py-2 rounded-md flex items-center space-x-2"
+                  onClick={handleLinkClick}
+                  className="text-white bg-green-600 hover:bg-green-700 font-medium px-3 py-1.5 rounded-md flex items-center gap-1.5 text-sm w-fit"
                 >
-                  <FaHeart />
+                  <FaHandHoldingHeart className="text-pink-200 text-xs" />
                   <span>Donate</span>
                 </Link>
               </div>
