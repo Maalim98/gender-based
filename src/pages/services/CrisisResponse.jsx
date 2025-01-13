@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { FaPhone, FaShieldAlt, FaAmbulance, FaHandHoldingHeart, FaLock } from 'react-icons/fa';
+import heroBg from '../../assets/images/awareeness2.jpg';
 
 const CrisisResponse = () => {
   const emergencyServices = [
@@ -39,31 +40,36 @@ const CrisisResponse = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-white to-gray-50">
+    <div className="min-h-screen bg-white">
       {/* Emergency Alert Banner */}
-      <div className="bg-red-600 text-white py-3 px-4">
-        <div className="container mx-auto text-center">
-          <p className="text-sm md:text-base font-medium">
-            If you're in immediate danger, call our emergency hotline: 
-            <a href="tel:0717069813" className="ml-2 font-bold underline">
-              0717 069 813
-            </a>
-          </p>
+      <div className="bg-blue-800 text-white py-1.5 px-4 text-center text-xs sm:text-sm">
+        <div className="container mx-auto flex items-center justify-center gap-2">
+          <FaPhone className="text-blue-200" />
+          <span>24/7 Helpline: </span>
+          <a href="tel:0717069813" className="font-bold hover:text-blue-200 transition-colors">
+            0717 069 813
+          </a>
         </div>
       </div>
 
-      {/* Hero Section */}
-      <section className="bg-red-900 text-white py-20">
-        <div className="container mx-auto px-4">
+      {/* Hero Section with Background Image */}
+      <section 
+        className="relative h-[60vh] bg-cover bg-center flex items-center" 
+        style={{
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url(${heroBg})`
+        }}
+      >
+        <div className="absolute inset-0 bg-black/20" /> {/* Subtle overlay */}
+        <div className="container mx-auto px-4 relative z-10">
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             className="max-w-3xl mx-auto text-center"
           >
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight text-white">
               Emergency Crisis Response
             </h1>
-            <p className="text-lg md:text-xl text-red-100">
+            <p className="text-lg md:text-xl text-gray-100 leading-relaxed">
               Immediate assistance and protection for survivors of gender-based violence. 
               Available 24/7, confidential, and free of charge.
             </p>
