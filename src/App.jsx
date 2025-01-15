@@ -26,7 +26,7 @@ import Counselling from './pages/services/Counselling';
 import SupportGroup from './pages/services/SupportGroup';
 import Donate from './pages/Donate';
 import Report from './pages/Report';
-
+import Resources from './pages/Resources';
 
 function App() {
   return (
@@ -51,6 +51,7 @@ function App() {
             <Route path="/news/network" element={<NetworkPage />} />
             <Route path="/get-support" element={<GetSupport />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/resources" element={<Resources />} />
             
             <Route path="/blogs">
               <Route path="law-enforcement" element={<LawEnforcement />} />
