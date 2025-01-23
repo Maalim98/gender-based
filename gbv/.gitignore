@@ -1,10 +1,24 @@
 # Dependencies
 /node_modules
 
-# Build
-/dist
-/.vercel
+# Environment Variables
 .env
+
+# Build files
+/dist
+/build
+/.vercel
+
+# IDE and Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# System files
+.DS_Store
+Thumbs.db
+desktop.ini
 
 # Personal Documents
 *.docx
@@ -14,7 +28,6 @@
 *.rdp
 *.exe
 *.tmp
-desktop.ini
 
 # Unrelated Projects
 4life-master/
@@ -41,7 +54,6 @@ tuts/
 weather app/
 weatherapp/
 
-# System files
-.DS_Store
+# Custom Office Templates
 Custom Office Templates/
 ~$*
