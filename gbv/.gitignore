@@ -1,0 +1,52 @@
+# Dependencies
+node_modules/
+
+# Environment variables
+.env
+
+# Build files
+dist/
+build/
+
+# IDE files
+.vscode/
+.idea/
+
+# System files
+.DS_Store
+desktop.ini
+*.tmp
+
+# Office temp files
+~$*
+*.docx
+*.pdf
+*.xlsx
+*.wps
+*.rdp
+*.exe
+
+# Other directories not related to project
+4life-master/
+Dice challenge/
+HowStuff-Learn/
+React-CRUD-App/
+Tesla ui clone/
+TinDog-Start-master/
+__MACOSX/
+angela html/
+cooking/
+crud-app/
+edge-ledger/
+hospital/
+hotel website/
+js/
+magic-memory/
+portfolio_website/
+python practise/
+tailwind portfolio/
+tailwindcss/
+todo-list/
+tuts/
+weather app/
+weatherapp/
